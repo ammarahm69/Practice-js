@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - JS
+
+    </title>
+</head>
+
+<body>
+
+
+    <script>// var gender = prompt('enter your Gender')
+        // var points = 0
+        // if(gender === 'male'){
+        // console.log('true');
+        // points = 10
+        // }
+        // else{
+        //     console.log('false');
+        //     points =5
+        // }
+        // console.log(points);
+        // console.log(a === 'jjj');
+
+        // var totalCost = +prompt('enter your totalCost')
+        // var materialsCost =+prompt('enter your materialsCost')
+        // var laborCost = +prompt('enter your laborCost')
+        // //      50   ===      10+40
+        // if (totalCost === materialsCost + laborCost) {
+        //     console.log('true' ,"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
+        // }else{
+        // console.log('false',"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
+        // }
+
+
+        // var a = 10 , b= 5 , x=2 , y=8
+        // //  10         5
+        // if (x + y === a - b) {
+
+        // }
+
+        // var yourTicketNumber = 487209
+        //  if (yourTicketNumber !== 487208) {
+        //      alert("Better luck next time.");
+        //      }
+
+        // 1=Mon
+        // 2= tue
+        // 3 =wed
+        // 4= thur
+        // 5 = fri
+        // 6 = sat
+        // 7 = sun
+        // 1 t0 7
+        // plz your number type is 1 to 7
+        // var weekday = +prompt('enter your Weekday number')
+        // if(weekday === 1){
+        //     console.log('Mon');
+        // }
+        // else if(weekday == 2){
+        //     console.log('Tue');
+        // }
+        // else if(weekday == 3){
+        //     console.log('Wed');
+        // }
+        // else if(weekday == 4){
+        //     console.log('Thur');
+        // }
+        // else if(weekday == 5){
+        //     console.log('Fri');
+        // }
+        // else if(weekday == 6){
+        //     console.log('Sat');
+        // }
+        // else if(weekday == 7){
+        //     console.log('Sun');
+        // }else{
+        //     console.log('plz type  your number is 1 to 7');
+        // }
+
+        // console.log(5 === '5');
+
+        // var userName = prompt('enter userName')
+        // var password = prompt('enter Password')
+        // if(userName == 'xyz@gmail.com' || password == 123  ){
+        // console.log("login");
+        // }else{
+        //     console.log("plz try again");
+        // }
+
+        // var weight = 310
+        // var time   = 6
+
+        //  if (weight > 300 || time < 6) {
+        //     alert("Come to our tryout!");
+        //     }
+        //     else {
+        //     alert("Come to our cookout!");
+        //     }
+
+
+        // var marks = 20
+
+        // if(marks >= 0 && marks <= 20){
+        //     console.log('fail');
+        // }
+        // else if(marks >20 || marks <40){
+        // console.log('E');
+        // }
+        // else if(marks >40 || marks <60){
+        // console.log('D');
+        // }
+        // else{
+        //     console.log('pass');
+        // }
+
+
+        // var userInput = +prompt("Enter number to see your grade.");
+        // if (userInput > 0 && userInput <= 20) {
+        //     document.write("You Failed!!");
+
+        // }
+        // else if (userInput >= 21 && userInput <= 30){
+        //     document.write("You got D grade");
+        // }
+        // else if (userInput >= 31 && userInput<= 35){
+        //     document.write("You got C grade ");
+
+        // }
+        // else if (userInput >=36 && userInput<= 41 ){
+        //     document.write("You got B grade");
+        // }
+        // else if (userInput >= 42 && userInput<= 50){
+        //     document.write("You got A grade");
+        // }
+
+        // var userNum = +prompt('Enter number');
+        // document.write(`Table of ${userNum} `+ "<br>");
+        // document.write(`${userNum} X 1 = ${userNum*1}` + '<br>');
+        // document.write(`${userNum} X 2 = ${userNum*2}` + '<br>');
+        // document.write(`${userNum} X 3 = ${userNum*3}` + '<br>');
+        // document.write(`${userNum} X 4 = ${userNum*4}` + '<br>');
+
+        //Arrays
+        //Push --- Adds element in the last
+        //Unshift ---- adds elements in the first of the array
+        //     var dailyActivities = ['Breakfast', 'Lunch'];
+        //     console.log(dailyActivities);
+
+        //     dailyActivities.push('Brunch', 'Dinner');
+        //     console.log(dailyActivities)
+
+        //     dailyActivities.push('Coding');
+        //     dailyActivities.push('Good Night');
+
+
+        //     console.log(dailyActivities);
+
+        //     dailyActivities.unshift('Exercise');
+        //     dailyActivities.unshift('Fajr-Namaz');
+        //     dailyActivities.unshift('Good Morning');
+        //     console.log(dailyActivities);
+
+        // var friends = ['Ammar', 'Iqrash'];
+        // console.log(friends);
+        // console.log(friends[0]);
+        // console.log(friends[1]);
+
+        // friends.push('Anas', 'Shoaib');
+        // console.log(friends);
+        // console.log(friends[2]);
+        // console.log(friends[3]);
+
+        // friends.unshift('Talha', 'Kashan');
+        // console.log(friends);
+        // console.log(friends[0]);
+        // console.log(friends[1]);
+
+        // friends.unshift('Ali', 'Biccu');
+        // console.log(friends);
+        // console.log(friends[0]);
+        // console.log(friends[1]);
+
+        // friends.push('Saif');
+        // console.log(friends);
+        // console.log(friends[8]);
+
+        // console.log(friends[0]);
+        // console.log(friends[1]);
+        // console.log(friends[2]);
+        // console.log(friends[3]);
+        // console.log(friends[4]);
+        // console.log(friends[5]);
+        // console.log(friends[6]);
+        // console.log(friends[7]);
+        // console.log(friends[8]);
+
+
+        //removes 4th index element
+        // var x = numbers.splice(4, 1);
+        // //splice(index,no of elements)
+
+        // //console:4th index:[ 5 ]
+        // console.log(x);
+
+        // var number =[1 ,2 ,3 , 4 , 5 ,6 , "Ammar" , "Karachi" , "Ayeza"];
+        // number.splice();
+        // console.log(number);
+
+
+        // var array = [1, 2, 3, 4, 5];
+        // console.log(array);
+        // var removed = array.splice(2);
+        // console.log(array);
+
+        // array.splice(2 , 0 ,'a' , 'b');
+        // console.log(array);
+
+        // array.splice(1 , 1 , 'x');
+        // console.log(array);
+
+        // console.log(removed);
+
+
+        // var check = +prompt('Enter number to check');
+        // var num = [1 , 20 , 30 , 50 , 10 , 35 ,15];
+        // var found = false //flag
+        // for(var i= 0 ; i<num.length ; i++){
+        //     if (num[i]=== check){
+        //         found = true;
+        //         break;
+        //     }
+        // }
+        // if(found === true){
+        //     console.log('Found');
+        // }
+        // else{
+        //     console.log('Not Found');
+        // }
+
+
+        // var UserNum = +prompt('Enter your  number (Only enter number from 1-20)');
+        // var number = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+        // var found = false;
+        // for (var i = 0; i < number.length; i++) {
+        //     if (UserNum == number[i]) {
+        //         found = true;
+        //         break;
+        //     }
+        // }
+        // if (found === ) {true
+        //     console.log(`${UserNum} is an even number`);
+        // }
+        // else {
+        //     console.log(`${UserNum} is an odd number`);
+        // }
+
+        // var table = +prompt('Which table you want');
+        // for (var i = 1; i <= 10; i++) {
+        //     console.log(`${table * i}`);
+        // }
+        // var userInput = prompt("Enter your grocessary")
+        // var grocessasry = ['Ata', 'Ghee', 'Sugar'];
+        // var correct = false;
+
+        // for (var i = 0; i < grocessasry.length; i++) {
+        //     if(userInput === grocessasry[i]){
+        //         correct = true;
+        //         break;
+        //     }
+        // }
+        // if(correct === true){
+        //     console.log(`${userInput} is in basic `);
+        // }
+        // else{
+        //     console.log(`${userInput} no its not in basic`);
+        // }
+
+        // var userNames = prompt(`Enter your name`); // value from user
+        // var name_1 = ['Burhan', 'Ali', 'Qasim', 'Saif']; // array
+        // var nameFound = false;
+        // for (i = 0; i < name_1.length; i++) {
+        //     if (userNames == name_1[i]) {
+        //         nameFound = true;
+        //         break
+        //     }
+        // }
+        // if (nameFound == true) {
+        //     document.write(`${userNames} is selected in the team`);
+        // }
+        // else {
+        //     document.write(`${userNames} is not selected in the team`);
+        // }
+
+        // var InputNum = +prompt('Enter number');
+        // var num = [1, 2, 3 , 4, 5, 6, 7, 8];
+        // for (i = 0; i <= num.length; i++) {
+        //     document.write(i + "<br>" + "<hr>");
+
+        // }
+
+        // // Define an array
+        // var numbers = [5, 10, 15, 20, 25];
+
+        // // Initialize a variable to store the sum
+        // var sum = 0;
+
+        // // Loop through the array and add each element to the sum
+        // for (var i = 0; i < numbers.length; i++) {
+        //     sum += numbers[i];
+        // }
+
+        // // Print the sum
+        // console.log("The sum of the elements in the array is: " + sum);
+
+        // var sum = 0 ;
+        // var number = [1, 2, 3, 4, 5, 6];
+        // for (var i = 0; i < number.length; i++) {
+        //     sum += number[i];
+        // }
+        // console.log(sum);
+        // var number = [2 ,3 ,5 , 6 ,6];
+        // var add = 0;
+        // for(var i=0 ; i < number.length ; i++){
+        //     add += number[i];
+        // }
+        // console.log(add);
+
+        // var arr = ['rizwan' ,'ali' ,'ahmed','faraz','samad'];
+        // arr.unshift('aijaz' , 'hassan' , 'daniyal');
+        // for(i=0 ; i<arr.length ; i++){
+        //     document.write(arr[i] + '<tr>'+ '<>' + '<>');
+        // }
+
+        // arr.push('burhan' , 'wajid');
+
+        // var userInput = prompt("Enter your name");
+
+        // var present = false;
+
+        // for(var i = 0 ; i < arr.length ; i++){
+
+        //     if(userInput == arr[i]){
+        //         present = true;
+        //         break
+        //     }
+        // }
+        // if(present == true){
+        //     document.write(`${userInput} is a team member`)
+        // }
+        // else{
+        //     document.write(`${userInput} not found`);
+        // }
+
+        // var table = +prompt('Enter table');
+        // var tableStart = +prompt(`Enter start point of table`);
+        // var tableEnd = +prompt(`Enter end point`)
+        // document.write(`<h1>Table of ${table}</h1>` + '<br>');
+        // for (i = tableStart; i <= tableEnd; i++) {
+        //     document.write(`${table} x ${i} = ${table * i}` + '<br>' + '<hr>');
+        // }
+
+        // var startNum = +prompt('First Number');
+        // var lastNum = +prompt(`Last Number`);
+        // for (i = 0; i <= 100; i++) {
+        //     console.log(i);
+        // }
+        // console.log('Hello');
+        // var userInput = prompt('Enter Gross');
+        // var gross = ['ata', 'ghee', 'oil'];
+        // var basic = false;
+        // for (i = 0; i < gross.length; i++) {
+        //     if (userInput === gross[i]) {
+        //         basic = true;
+        //         break;
+
+        //     };
+        // }
+        // if (basic === true) {
+        //     document.write(`${userInput} is the basic of all grossery `);
+        // }
+        // else {
+        //     document.write(`${userInput} is not in basic grossey`);
+        // };
+        // var i = 0;
+        // console.log(i);
+        // i = i + 5;
+        // console.log(i);
+        // i = i + 5;
+        // console.log(i);
+
+        // for(var i=0 ; i < 10; i= i+2){
+        //     console.log(i);
+        // }
+
+
+        // var names = ['ammar', 'ahmed'];
+        // var userInput = prompt('Enter name here');
+        // names.push("ali" , "burhan");
+        // // console.log(names);
+        // var nameFound = false;
+        // for (var i = 0; i < names.length; i++) {
+        //     if (userInput == names[i]) {
+        //         nameFound = true;
+        //         break;
+        //     }
+        // }
+        // if (nameFound == true) {
+        //     console.log(`${userInput} name is found`);
+        // }
+        // else {
+        //     console.log(`${userInput} name not found`);
+        // }
+
+        // var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+        // var cityToCheck = prompt("Enter your city");
+        // var matchFound = false;
+        // for(var i =0 ; i<=4 ; i++){
+        //     if(cityToCheck == cleanestCities[i]){
+        //         alert("Its clean city")
+        //     }
+        //     else{
+        //         alert("Not found");
+        //     }
+        // }
+        // for(var i =0 ; i < cleanestCities.length ; i++){
+        //     if(cityToCheck == cleanestCities[i]){
+        //         matchFound = true;
+        //         break;
+        //     }
+
+        // } 
+        // if(matchFound == true){
+        //     alert("Its a clean city");
+        // }
+
+        // else{
+        //     alert("Not a clean city");
+        // }
+        // var userInput = prompt("Enter your name");
+        // var names = ['ammar', 'burhan'];
+        // var nameFound = false;
+
+        // for (var i = 0; i < names.length; i++) {
+        //     if (userInput === names[i]) { 
+        //         nameFound = true; 
+        //         break;
+        //     }
+        // }
+        // if (nameFound === true) { 
+        //     console.log('Name found');
+        // } else {
+        //     console.log('Name not found');
+        // }
+
+        //                     for(var i = 0 ; i <  10 ; i++){
+        //     document.write("Ammar" ,i+ '<br>');
+        // };
+
+        // for (i = 10; i >= 1; i--) {
+        //     console.log(i);
+        // }
+
+        // for(var i =100 ; i >= 1 ; i--){
+        //     console.log(i);
+
+        // }
+
+        // for (var i = 0 ; i <=100 ; i++){
+        //     console.log(i);
+        // }
+
+        // for (var i = 0; i <= 100; i = i + 10) {
+        //     console.log(i);
+        // }
+
+        // var arr = [5, 6, 7, 8, 2, 12];
+        // // arr.length;
+        // // console.log(arr);
+        // for (var i = 0; i < arr.length; i++) {
+        //     document.write('Number ', i + 1 + " ", arr[i] + "<br>" + "<hr>");
+        // };
+
+        // var arr = [4, 5, 12, 14, 13, 23, 29, 28, , 33, 34, 37, 39, 44];
+        // var even = [];
+        // var odd = [];
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] % 2 === 0) {
+        //         even.push(arr[i]);
+        //     }
+        //     else {       
+        //         odd.push(arr[i]);
+        //     }
+        // }
+
+        // document.write("Even Number are " + even + '<br>');
+        // document.write("Odd Number are " + odd);
+
+
+        // var names = ['John', 'Alice', 'Bob'];
+        // var namArray = [];
+        // // console.log(namArray);
+        // var userName = prompt("Check if the name is in the list or added");
+        // var nameFound = false;
+        // for (var i = 0; i < names.length; i++) {
+        //     if (userName === names[i]) {
+        //         nameFound = true;
+        //         break;
+        //     }
+        // }
+        // if (nameFound === true) {
+        //     document.write(`This name is already in the list`);
+
+        // }
+        // else {
+        //     namArray.push(userName);
+        //     document.write(`${userName} is added to the list`);
+        // }
+        
+    </script>
+
+</body>
+
+</html>
