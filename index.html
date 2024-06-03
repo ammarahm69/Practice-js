@@ -2,1570 +2,2219 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice - JS
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice - JS</title>
+  <style>
+    body {
+      background-color: rgb(186, 141, 44);
+    }
 
-    </title>
+    button {
+      display: inline-block;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      background-color: #21f3d0;
+      position: relative;
+      /* Needed for box-shadow on hover */
+      overflow: hidden;
+      /* Needed for smoother transition */
+    }
+
+    button:hover {
+      transition: 0.2s all ease;
+      opacity: 0.8;
+      color: brown;
+    }
+  </style>
 </head>
 
 <body>
 
 
-    <script>// var gender = prompt('enter your Gender')
-        // var points = 0
-        // if(gender === 'male'){
-        // console.log('true');
-        // points = 10
-        // }
-        // else{
-        //     console.log('false');
-        //     points =5
-        // }
-        // console.log(points);
-        // console.log(a === 'jjj');
-
-        // var totalCost = +prompt('enter your totalCost')
-        // var materialsCost =+prompt('enter your materialsCost')
-        // var laborCost = +prompt('enter your laborCost')
-        // //      50   ===      10+40
-        // if (totalCost === materialsCost + laborCost) {
-        //     console.log('true' ,"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
-        // }else{
-        // console.log('false',"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
-        // }
-
-
-        // var a = 10 , b= 5 , x=2 , y=8
-        // //  10         5
-        // if (x + y === a - b) {
-
-        // }
-
-        // var yourTicketNumber = 487209
-        //  if (yourTicketNumber !== 487208) {
-        //      alert("Better luck next time.");
-        //      }
-
-        // 1=Mon
-        // 2= tue
-        // 3 =wed
-        // 4= thur
-        // 5 = fri
-        // 6 = sat
-        // 7 = sun
-        // 1 t0 7
-        // plz your number type is 1 to 7
-        // var weekday = +prompt('enter your Weekday number')
-        // if(weekday === 1){
-        //     console.log('Mon');
-        // }
-        // else if(weekday == 2){
-        //     console.log('Tue');
-        // }
-        // else if(weekday == 3){
-        //     console.log('Wed');
-        // }
-        // else if(weekday == 4){
-        //     console.log('Thur');
-        // }
-        // else if(weekday == 5){
-        //     console.log('Fri');
-        // }
-        // else if(weekday == 6){
-        //     console.log('Sat');
-        // }
-        // else if(weekday == 7){
-        //     console.log('Sun');
-        // }else{
-        //     console.log('plz type  your number is 1 to 7');
-        // }
-
-        // console.log(5 === '5');
-
-        // var userName = prompt('enter userName')
-        // var password = prompt('enter Password')
-        // if(userName == 'xyz@gmail.com' || password == 123  ){
-        // console.log("login");
-        // }else{
-        //     console.log("plz try again");
-        // }
-
-        // var weight = 310
-        // var time   = 6
-
-        //  if (weight > 300 || time < 6) {
-        //     alert("Come to our tryout!");
-        //     }
-        //     else {
-        //     alert("Come to our cookout!");
-        //     }
-
-
-        // var marks = 20
-
-        // if(marks >= 0 && marks <= 20){
-        //     console.log('fail');
-        // }
-        // else if(marks >20 || marks <40){
-        // console.log('E');
-        // }
-        // else if(marks >40 || marks <60){
-        // console.log('D');
-        // }
-        // else{
-        //     console.log('pass');
-        // }
-
-
-        // var userInput = +prompt("Enter number to see your grade.");
-        // if (userInput > 0 && userInput <= 20) {
-        //     document.write("You Failed!!");
-
-        // }
-        // else if (userInput >= 21 && userInput <= 30){
-        //     document.write("You got D grade");
-        // }
-        // else if (userInput >= 31 && userInput<= 35){
-        //     document.write("You got C grade ");
-
-        // }
-        // else if (userInput >=36 && userInput<= 41 ){
-        //     document.write("You got B grade");
-        // }
-        // else if (userInput >= 42 && userInput<= 50){
-        //     document.write("You got A grade");
-        // }
-
-        // var userNum = +prompt('Enter number');
-        // document.write(`Table of ${userNum} `+ "<br>");
-        // document.write(`${userNum} X 1 = ${userNum*1}` + '<br>');
-        // document.write(`${userNum} X 2 = ${userNum*2}` + '<br>');
-        // document.write(`${userNum} X 3 = ${userNum*3}` + '<br>');
-        // document.write(`${userNum} X 4 = ${userNum*4}` + '<br>');
-
-        //Arrays
-        //Push --- Adds element in the last
-        //Unshift ---- adds elements in the first of the array
-        //     var dailyActivities = ['Breakfast', 'Lunch'];
-        //     console.log(dailyActivities);
-
-        //     dailyActivities.push('Brunch', 'Dinner');
-        //     console.log(dailyActivities)
-
-        //     dailyActivities.push('Coding');
-        //     dailyActivities.push('Good Night');
-
-
-        //     console.log(dailyActivities);
-
-        //     dailyActivities.unshift('Exercise');
-        //     dailyActivities.unshift('Fajr-Namaz');
-        //     dailyActivities.unshift('Good Morning');
-        //     console.log(dailyActivities);
-
-        // var friends = ['Ammar', 'Iqrash'];
-        // console.log(friends);
-        // console.log(friends[0]);
-        // console.log(friends[1]);
-
-        // friends.push('Anas', 'Shoaib');
-        // console.log(friends);
-        // console.log(friends[2]);
-        // console.log(friends[3]);
-
-        // friends.unshift('Talha', 'Kashan');
-        // console.log(friends);
-        // console.log(friends[0]);
-        // console.log(friends[1]);
-
-        // friends.unshift('Ali', 'Biccu');
-        // console.log(friends);
-        // console.log(friends[0]);
-        // console.log(friends[1]);
-
-        // friends.push('Saif');
-        // console.log(friends);
-        // console.log(friends[8]);
-
-        // console.log(friends[0]);
-        // console.log(friends[1]);
-        // console.log(friends[2]);
-        // console.log(friends[3]);
-        // console.log(friends[4]);
-        // console.log(friends[5]);
-        // console.log(friends[6]);
-        // console.log(friends[7]);
-        // console.log(friends[8]);
-
-
-        //removes 4th index element
-        // var x = numbers.splice(4, 1);
-        // //splice(index,no of elements)
-
-        // //console:4th index:[ 5 ]
-        // console.log(x);
-
-        // var number =[1 ,2 ,3 , 4 , 5 ,6 , "Ammar" , "Karachi" , "Ayeza"];
-        // number.splice();
-        // console.log(number);
-
-
-        // var array = [1, 2, 3, 4, 5];
-        // console.log(array);
-        // var removed = array.splice(2);
-        // console.log(array);
-
-        // array.splice(2 , 0 ,'a' , 'b');
-        // console.log(array);
-
-        // array.splice(1 , 1 , 'x');
-        // console.log(array);
-
-        // console.log(removed);
-
-
-        // var check = +prompt('Enter number to check');
-        // var num = [1 , 20 , 30 , 50 , 10 , 35 ,15];
-        // var found = false //flag
-        // for(var i= 0 ; i<num.length ; i++){
-        //     if (num[i]=== check){
-        //         found = true;
-        //         break;
-        //     }
-        // }
-        // if(found === true){
-        //     console.log('Found');
-        // }
-        // else{
-        //     console.log('Not Found');
-        // }
-
-
-        // var UserNum = +prompt('Enter your  number (Only enter number from 1-20)');
-        // var number = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-        // var found = false;
-        // for (var i = 0; i < number.length; i++) {
-        //     if (UserNum == number[i]) {
-        //         found = true;
-        //         break;
-        //     }
-        // }
-        // if (found === ) {true
-        //     console.log(`${UserNum} is an even number`);
-        // }
-        // else {
-        //     console.log(`${UserNum} is an odd number`);
-        // }
-
-        // var table = +prompt('Which table you want');
-        // for (var i = 1; i <= 10; i++) {
-        //     console.log(`${table * i}`);
-        // }
-        // var userInput = prompt("Enter your grocessary")
-        // var grocessasry = ['Ata', 'Ghee', 'Sugar'];
-        // var correct = false;
-
-        // for (var i = 0; i < grocessasry.length; i++) {
-        //     if(userInput === grocessasry[i]){
-        //         correct = true;
-        //         break;
-        //     }
-        // }
-        // if(correct === true){
-        //     console.log(`${userInput} is in basic `);
-        // }
-        // else{
-        //     console.log(`${userInput} no its not in basic`);
-        // }
-
-        // var userNames = prompt(`Enter your name`); // value from user
-        // var name_1 = ['Burhan', 'Ali', 'Qasim', 'Saif']; // array
-        // var nameFound = false;
-        // for (i = 0; i < name_1.length; i++) {
-        //     if (userNames == name_1[i]) {
-        //         nameFound = true;
-        //         break
-        //     }
-        // }
-        // if (nameFound == true) {
-        //     document.write(`${userNames} is selected in the team`);
-        // }
-        // else {
-        //     document.write(`${userNames} is not selected in the team`);
-        // }
-
-        // var InputNum = +prompt('Enter number');
-        // var num = [1, 2, 3 , 4, 5, 6, 7, 8];
-        // for (i = 0; i <= num.length; i++) {
-        //     document.write(i + "<br>" + "<hr>");
-
-        // }
-
-        // // Define an array
-        // var numbers = [5, 10, 15, 20, 25];
-
-        // // Initialize a variable to store the sum
-        // var sum = 0;
-
-        // // Loop through the array and add each element to the sum
-        // for (var i = 0; i < numbers.length; i++) {
-        //     sum += numbers[i];
-        // }
-
-        // // Print the sum
-        // console.log("The sum of the elements in the array is: " + sum);
-
-        // var sum = 0 ;
-        // var number = [1, 2, 3, 4, 5, 6];
-        // for (var i = 0; i < number.length; i++) {
-        //     sum += number[i];
-        // }
-        // console.log(sum);
-        // var number = [2 ,3 ,5 , 6 ,6];
-        // var add = 0;
-        // for(var i=0 ; i < number.length ; i++){
-        //     add += number[i];
-        // }
-        // console.log(add);
-
-        // var arr = ['rizwan' ,'ali' ,'ahmed','faraz','samad'];
-        // arr.unshift('aijaz' , 'hassan' , 'daniyal');
-        // for(i=0 ; i<arr.length ; i++){
-        //     document.write(arr[i] + '<tr>'+ '<>' + '<>');
-        // }
-
-        // arr.push('burhan' , 'wajid');
-
-        // var userInput = prompt("Enter your name");
-
-        // var present = false;
-
-        // for(var i = 0 ; i < arr.length ; i++){
-
-        //     if(userInput == arr[i]){
-        //         present = true;
-        //         break
-        //     }
-        // }
-        // if(present == true){
-        //     document.write(`${userInput} is a team member`)
-        // }
-        // else{
-        //     document.write(`${userInput} not found`);
-        // }
-
-        // var table = +prompt('Enter table');
-        // var tableStart = +prompt(`Enter start point of table`);
-        // var tableEnd = +prompt(`Enter end point`)
-        // document.write(`<h1>Table of ${table}</h1>` + '<br>');
-        // for (i = tableStart; i <= tableEnd; i++) {
-        //     document.write(`${table} x ${i} = ${table * i}` + '<br>' + '<hr>');
-        // }
-
-        // var startNum = +prompt('First Number');
-        // var lastNum = +prompt(`Last Number`);
-        // for (i = 0; i <= 100; i++) {
-        //     console.log(i);
-        // }
-        // console.log('Hello');
-        // var userInput = prompt('Enter Gross');
-        // var gross = ['ata', 'ghee', 'oil'];
-        // var basic = false;
-        // for (i = 0; i < gross.length; i++) {
-        //     if (userInput === gross[i]) {
-        //         basic = true;
-        //         break;
-
-        //     };
-        // }
-        // if (basic === true) {
-        //     document.write(`${userInput} is the basic of all grossery `);
-        // }
-        // else {
-        //     document.write(`${userInput} is not in basic grossey`);
-        // };
-        // var i = 0;
-        // console.log(i);
-        // i = i + 5;
-        // console.log(i);
-        // i = i + 5;
-        // console.log(i);
-
-        // for(var i=0 ; i < 10; i= i+2){
-        //     console.log(i);
-        // }
-
-
-        // var names = ['ammar', 'ahmed'];
-        // var userInput = prompt('Enter name here');
-        // names.push("ali" , "burhan");
-        // // console.log(names);
-        // var nameFound = false;
-        // for (var i = 0; i < names.length; i++) {
-        //     if (userInput == names[i]) {
-        //         nameFound = true;
-        //         break;
-        //     }
-        // }
-        // if (nameFound == true) {
-        //     console.log(`${userInput} name is found`);
-        // }
-        // else {
-        //     console.log(`${userInput} name not found`);
-        // }
-
-        // var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
-        // var cityToCheck = prompt("Enter your city");
-        // var matchFound = false;
-        // for(var i =0 ; i<=4 ; i++){
-        //     if(cityToCheck == cleanestCities[i]){
-        //         alert("Its clean city")
-        //     }
-        //     else{
-        //         alert("Not found");
-        //     }
-        // }
-        // for(var i =0 ; i < cleanestCities.length ; i++){
-        //     if(cityToCheck == cleanestCities[i]){
-        //         matchFound = true;
-        //         break;
-        //     }
-
-        // }
-        // if(matchFound == true){
-        //     alert("Its a clean city");
-        // }
-
-        // else{
-        //     alert("Not a clean city");
-        // }
-        // var userInput = prompt("Enter your name");
-        // var names = ['ammar', 'burhan'];
-        // var nameFound = false;
-
-        // for (var i = 0; i < names.length; i++) {
-        //     if (userInput === names[i]) {
-        //         nameFound = true;
-        //         break;
-        //     }
-        // }
-        // if (nameFound === true) {
-        //     console.log('Name found');
-        // } else {
-        //     console.log('Name not found');
-        // }
-
-        //                     for(var i = 0 ; i <  10 ; i++){
-        //     document.write("Ammar" ,i+ '<br>');
-        // };
-
-        // for (i = 10; i >= 1; i--) {
-        //     console.log(i);
-        // }
-
-        // for(var i =100 ; i >= 1 ; i--){
-        //     console.log(i);
-
-        // }
-
-        // for (var i = 0 ; i <=100 ; i++){
-        //     console.log(i);
-        // }
-
-        // for (var i = 0; i <= 100; i = i + 10) {
-        //     console.log(i);
-        // }
-
-        // var arr = [5, 6, 7, 8, 2, 12];
-        // // arr.length;
-        // // console.log(arr);
-        // for (var i = 0; i < arr.length; i++) {
-        //     document.write('Number ', i + 1 + " ", arr[i] + "<br>" + "<hr>");
-        // };
-
-        // var arr = [4, 5, 12, 14, 13, 23, 29, 28, , 33, 34, 37, 39, 44];
-        // var even = [];
-        // var odd = [];
-        // for (var i = 0; i < arr.length; i++) {
-        //     if (arr[i] % 2 === 0) {
-        //         even.push(arr[i]);
-        //     }
-        //     else {
-        //         odd.push(arr[i]);
-        //     }
-        // }
-
-        // document.write("Even Number are " + even + '<br>');
-        // document.write("Odd Number are " + odd);
-
-
-        // var names = ['John', 'Alice', 'Bob'];
-        // var namArray = [];
-        // // console.log(namArray);
-        // var userName = prompt("Check if the name is in the list or added");
-        // var nameFound = false;
-        // for (var i = 0; i < names.length; i++) {
-        //     if (userName === names[i]) {
-        //         nameFound = true;
-        //         break;
-        //     }
-        // }
-        // if (nameFound === true) {
-        //     document.write(`This name is already in the list`);
-
-        // }
-        // else {
-        //     namArray.push(userName);
-        //     document.write(`${userName} is added to the list`);
-        // }
-
-        // var num = [1, 2, 4, 3 ,45, 123];
-        // var sum = 0;
-        // for (i = 0; i < num.length; i++) {
-        //     sum += num[i]
-        //     if(num[i]%2 === 0){
-        //         console.log('even',num[i]);
-        //     }
-        //     else{
-        //         console.log('odd' ,num[i]);
-        //     }
-        // }
-        // console.log(sum);
-
-        //     var namE = ['ammar', 'ahmed', 'ali', 'daniyal'];
-        //     var found =[]
-        //    for(i=0; i<namE.length; i++){
-        //     if(namE[i][0]==='a'){
-        //         console.log(namE[i] +'Found');
-
-        //     }
-        //     else{
-        //         console.log(namE[i]+'Not Found');
-        //     }
-        //    }
-        // 0         1         2       3       4      5            6         7         8       9
-        // var firstName = ['burhan ', ' wajid ', ' taha ', ' talha ', ' zain ', ' mubeen ', ' ibrahim ', ' kashan ', 'anas', ' iqrash', ' iqra', ' battol'];
-        // var lastName = ['wara ', ' maham ', ' maryam ', ' malik ', ' komal ', ' zobia ', ' ammar ', ' ali ', 'malik ', ' eman', ' alisba', ' anisha', ' iraj'];
-        // var combine = [];
-        // for (var i = 0; i < firstName.length; i++) {
-        //     for (var j = 0; j < lastName.length; j++) {
-        //         if (firstName[i][0] === lastName[j][0]) {
-        //             combine.push(firstNames[i] + lastNames[j])
-        //         }
-        //     }
-        // }
-        // document.write(combine)
-
-
-
-
-        // for (i = 0; i < cousins.length; i++) {
-        //     if (cousins[i][2, 0] === 't') {
-        //         console.log('Names which starts with letter t are', cousins[i]);
-        //         namt++;
-        //     }
-        //     if (cousins[i][6, 0] === 'i') {
-        //         console.log('Names which starts with letter i are', cousins[i]);
-        //         nami++;
-        //     }
-        //     if (cousins[i][5, 0] === 'm') {
-        //         console.log('Names which starts with letter m are', cousins[i]);
-        //         namm++;
-        //     }
-        //     if (cousins[i][1, 0] === 'w') {
-        //         console.log('Names which starts with letter w are', cousins[i]);
-        //         namw++;
-        //     }
-        // }
-        // console.log(' Total count for letter t :' + namt++);
-        // console.log(' Total count for letter i :' + nami++);
-        // console.log(' Total count for letter m :' + namm++);
-        // console.log(' Total count for letter w :' + namw++);
-
-
-
-
-        // var car = ['honda', 'suzuki', 'toyota'];
-        // for (var i = 0; i < car.length; i++) {
-        //     if (car[i] === 'honda') {
-        //         console.log('Cvic is best company',car[i]);
-        //     }
-        //     else if(car[i] === 'suzuki'){
-        //         console.log('Hi Roof is best', car[i]);
-        //     }
-        //     else if(car[i]=== 'toyota'){
-        //         console.log('corolla is best' , car[i]);
-        //     }
-        // }
-
-        // var number = [1, 3, 5, 7, 9, 12, 14, 15, 17, 18, 19, 20, 22, 23, 43, 65];
-        // var even = [];
-        // var odd = [];
-
-        // for (let i = 0; i < number.length; i++) {
-        //     if (number[i] % 2 === 0) {
-        //         console.log('At he index number', i + 1, number[i], 'is an even number');
-        //         even.push(number[i]);
-        //     }
-        //     else {
-        //         console.log('At he index number', i + 1, number[i], 'is an odd number');
-        //         odd.push(number[i]);
-        //     }
-
-        // }
-        // console.log(even);
-        // console.log(odd);
-
-        // var students = ['ahmed', 'bhai', 'ali', 'burhan', 'badmash', 'asim'];
-        // var a = [];
-        // var b = [];
-        // for (var i = 0; i < students.length; i++) {
-        //     if (students[i][0] === 'a') {
-        //         console.log('There  students which have starting letter a are', i, students[i]);
-        //         a.push(students[i]);
-        //     }
-        //    else if (students[i][1, 0] === 'b') {
-        //         console.log('There students which have starting letter b are', i, students[i]);
-        //         b.push(students[i]);
-        //     }
-
-        // }
-        // console.log(a);
-        // console.log(b);
-
-        // var age = [8, 10, 13, 17, 20, 23, 26, 28, 30, 32,14,22,54];
-        // console.log(age);
-        // var youngStudents = [];
-        // var AdultCount = 0;
-        // var youngCount = 0;
-        // var adultStudents = [];
-        // for (var i = 0; i < age.length; i++) {
-        //     if (age[i] <= 20) {
-        //         console.log('Young students in school ', age[i]);
-        //         youngStudents.push(age[i]);
-        //         youngCount++;
-        //     }
-
-        //     else {
-        //         console.log('Adult students in school ', age[i]);
-        //         adultStudents.push(age[i]);
-        //         AdultCount++;
-        //     }
-        // }
-
-        // console.log(adultStudents);
-        // console.log(youngStudents);
-        // console.log('Total Adult Student' , AdultCount);
-        // console.log('Total Young Student' , youngCount);
-
-        // var number = [2, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 17, 20, 22, 23, 25, 27, 29, 30];
-        // var even = [];
-        // var odd = [];
-        // var evenNum = 0;
-        // var oddNum = 0;
-        // for (var i = 0; i < number.length; i++) {
-        //     if (number[i] % 2 === 0) {
-        //         console.log('Even number', number[i]);
-        //         even.push(number[i]);
-        //         evenNum++;
-        //     }
-        //     else {
-        //         console.log('Odd number ', number[i]);
-        //         odd.push(number[i]);
-        //         oddNum++
-        //     }
-        // }
-        // console.log(even);
-        // console.log(odd);
-        // console.log('Total even number are ', evenNum);
-        // console.log('Total odd number are ', oddNum);
-
-
-
-        //  document.write('<center>')
-        // for (var i = 0; i < 8; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 7; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 6; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 5; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 4; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 3; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 2; i++) {
-        //     document.write('*');
-        // }
-        // document.write('<br>')
-        // for (var i = 0; i < 1; i++) {
-        //     document.write('*');
-        // }
-
-        // document.write('</center');
-
-        // console.log(studentsData[1][0]);
-
-        // let students_1 = ['Jack', 24];
-        // let students_2 = ['Sara', 23];
-        // let students_3 = ['Peter', 24];
-
-        // let studentsData = [students_1 , students_2 , students_3];
-        // console.log(studentsData);
-
-
-        // let x = [['Ammar', 12], ['Burhan', 23], ['Ali', 32]];
-        // //acess the first element of an array
-        // console.log(x[0]);
-        // //acess the first word
-        // console.log(x[0][0]);
-        // //acess the second element of an array
-        // console.log(x[1]);
-        // //acess the first word in the second element}
-        // console.log(x[1][0]);
-
-        // var num = [2, 3, 6, 8, 10];
-        // var userFind = 6;
-        // var add = 0;
-
-        // for (let i = 0; i < num.length; i++) {
-        //     if (num[i] == userFind) {
-        //         console.log(true);
-        //     }
-        //     add++;
-
-        // }
-        // //add ++ 0
-        // //add ++ 1
-        // //add ++ 2
-        // //add ++ 3
-        // //add ++ 4
-        // //add ++ 5
-        // console.log(add);
-
-
-        // var num = ['ammar', 'hira', 'aliyan'];
-        // var check = num.includes('ammar');
-        // console.log(check);
-
-
-        //Area of rectangle
-        // var lenghtOfRectangles = parseInt(prompt('Enter lenght of your rectangle'));
-        // var widthOfRectangle = parseInt(prompt('Enter width of your rectangle'));
-        // var muliply = lenghtOfRectangles*widthOfRectangle;
-        // if(muliply%2===0){
-        //     document.write(`Area of rectangle =${muliply} .`+'<br>'+` ${muliply} is an even number`);
-        // }
-        // else{
-        //     document.write(`Area of rectangle = ${muliply} .`+'<br>'+`${muliply} is an odd number`);
-
-        // }
-
-
-        //Even or Odd
-        // var userNum = +prompt('Enter number');
-        // if(userNum%2 === 0){
-        //     document.write(`This number is even`);
-
-        // }else{
-        //     document.write(`This number is odd`);
-        // }
-
-        // var age = 11;
-        // var price = 500;
-        // var discount = 30;
-        // if (age > 10 && age < 20) {
-        //     discount = 400;
-        //     alert(discount);
-        // }
-        // else {
-        //     var amount = price - discount;
-        //     alert(amount);
-        // }
-
-        // Nested for loop
-        // Example 1: Nested for loops
-        // for (let i = 0; i < 2; i++) { // 0
-
-        //     for (let j = 0; j < 3; j++) {//0
-        //         document.write(`${i}  ${j}`);
-
-
-        //     }
-        //     document.write('<br>')
-        // }
-
-        // for(var i=0 ; i<=5; i++){
-        //     for(var j=0 ; j<=i*2+1 ;j++){
-        //         document.write(`*`)
-        //     }
-        //     document.write('<br>')
-        // }
-
-        // for (var i = 0; i < 8; i++) {
-        //     for (var j = 0; j < 4; j++){
-        //         document.write(`${i}${j}`);
-        //     }
-        //     document.write('<br>')
-        // }
-
-        // for (var i = 0; i <10 ; i++){
-        //     for(var j=0 ; j<=i ; j++){
-        //         document.write(`*`);
-        //     }
-        //     document.write('<br>');
-        // }
-        // for (var i = 0; i < 5; i++) {
-        //     for (var j = 0; j < i; j++) {
-        //         document.write(`${i} ${j}`);
-        //     }
-        //     document.write('<br>')
-        // }
-
-        // var students =['ammar ' ,' aliyan ' , ' shahzad',' zaryab' , ' osama' , ' hassan'];
-        // var friends =['bicu' ,'anas','saif'];
-
-        // var text = students.concat(friends);
-        // document.write(text)
-        // for (let i = 5; i <= 60; i = i + 5){
-        //     console.log(i);
-        // }
-
-        // for (let i = 0; i < 5; i++) {
-        //     for (let j = 0; j < i; j++) {
-        //         document.write(`*`)
-        //     }
-        //     document.write('<br>')
-        // }
-
-        // var students = ['ammar', 'amir', 'burhan', 'aliyan', 'batool', 'asim'];
-        // var countA = 0;
-
-
-        // for (var i = 0; i < students.length; i++) {
-        //     if (students[i][0] === 'a') {
-        //         console.log(students[i]);
-        //         countA++;
-
-
-        //     }
-        // }
-        // console.log('Total a = ' + countA);
-
-        // document.write('<center>')
-        // for (var i = 0; i < 30; i++) {
-        //     for (var j = 0; j < i; j++) {
-        //         document.write('*')
-        //     }
-        //     document.write('<br>')
-        // }
-        // for (var a = 29; a > 0; a--) {
-        //     for (var b = a; b > 0; b--) {
-        //         document.write('*')
-        //     }
-        //     document.write('<br>')
-        // }
-        // document.write('</center>')
-        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        // var userInput = +prompt('Enter')-1;
-        // console.log(fruits[userInput]);
-        // console.log(fruits[userInput ===1 ('JS')]);
-        // if (userInput === 1) {
-        //     document.write(fruits[0])
-        // }
-        // if (userInput === 2) {
-        //     document.write(fruits[1])
-        // }
-
-        // for(var i=0 ; i<10 ; i++){
-        //     document.write(i)
-        // }
-
-
-        // console.log(fruits);
-        // var students = ['ammar', 'hasan', 'saif', 'farooq'];
-
-        // for (var i = 0; i < students.length; i++) {
-        //     let userInput = prompt('Replace ' + students[i]);
-
-        //     if (userInput !== null && userInput !== '') {
-        //         students[i] = userInput;
-        //     } else {
-        //         console.log('No replacement provided for ' + students[i] + ', keeping the original name.');
-        //     }
-        // }
-        // console.log(students);
-
-        // var fruits = ['apple', 'banana', 'apricot', 'mango'];
-        // for (var i = 0; i < fruits.length; i++) {
-        //     var userInput = prompt('Replace ' + fruits[i]);
-        //     if (userInput !== null && userInput !== '') {
-        //         fruits[i] = userInput;
-        //     }
-        //     else{
-        //         console.log('No repalcement in element ' + fruits[i]);
-        //     }
-        // }
-        // console.log(fruits);
-
-        // var numbers = [10, 20, 30, 40, 50];
-        // var sum = 0;
-        // for (var i = 0; i < numbers.length; i++) {
-        //     var userInput = +prompt("Enter to add a number to " + numbers[i]);
-        //     if (userInput !== null && userInput !== '') {
-        //         numbers[i] += userInput;
-        //         sum += numbers[i];
-        //     }
-        //     else {
-        //         console.log('Invaild value you can only write numbers');
-        //     }
-        // }
-        // console.log('Update numbers ' + numbers);
-        // console.log('Sum of updated ' + sum);
-
-
-        // let numbers = [10, 20, 30];
-        // let sum = 0 ;
-        // for(var i=0 ; i<numbers.length ;i++){
-        //     let userInput = +prompt('Enter number too add +'+ numbers[i]);
-        //     if(userInput !== null && userInput !== ''){
-        //         numbers[i]+=userInput
-        //         sum+=numbers[i]
-        //     }else{
-        //         console.log('Invalid value');
-        //     }
-        // }
-        // console.log('Updated values '+numbers);
-        // console.log('Total of Updated values '+ sum);
-
-
-        //     let x = 5;
-        //     let y = 10;
-        //     let z = 15;
-        //     x = y = z;
-        //    console.log(x);
-
-        // var fruits = ['Mango', 'Orange', 'Banana'];
-        // for (var i = 0; i < fruits.length; i++) {
-        //     let user = prompt('Replace ' + fruits[i]);
-        //     if(user !== null && user !== ''){
-        //         fruits[i] = user
-        //     }
-        //     else{
-        //         console.log('No replacement in '+ fruits[i]);
-        //     }
-        // }
-        // console.log(fruits);
-
-        //     var num = [10, 12, 43];
-        //     for (var i = 0; i < num.length; i++) {
-        //         let userInput = +prompt('Enter value to add with ' + num[i]);
-        //         if (userInput !== null && userInput !== '') {
-        //             num[i] += userInput
-        //         } else {
-        //             console.log('Invalid');
-        //         }
-        //     }
-        //     console.log(num);
-
-
-        // var num = [2, 4, 5, 6, 7, 8, 9, 10];
-        // var even = [];
-        // var odd = [];
-        // var totalsum=0;
-        // var counteven = 0;
-        // var countodd = 0;
-        // for (var i = 0; i < num.length; i++) {
-        //     let userInput =+prompt('Enter value to add with '+ num[i]) ;
-        //     if(userInput !==null && userInput!== ''){
-        //         num[i]+=userInput;
-        //         totalsum+=num[i]
-        //     }else{
-        //         console.log(`Nothing added in number `+ num[i] );
-        //     }
-        //     if (num[i] % 2 === 0) {
-        //         even.push(num[i]);
-        //         counteven++;
-        //     } else {
-        //         // console.log(`Odd numbers ` + num[i]);
-        //         odd.push(num[i]);
-        //         countodd++;
-        //     }
-        // }
-        // console.log(num);
-        // console.log('Even numbers ' + even+' .Total even numbers are '+ counteven);
-        // console.log('Odd numbers ' + odd + ' .Total odd numbers are '+ countodd);
-        // console.log('The total is ' +totalsum);
-
-
-        // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo'];
-        // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
-        // var fullName = [];
-        // document.write('<table>')
-        // document.write('<tr><th>First Name</th><th>Last Name</th></tr>');
-        // for (var i = 0; i < firstName.length; i++) {
-        //     for (var j = 0; j < lastName.length; j++) {
-        //         fullName.push(firstName[i] + ' ' + lastName[j])
-        //         document.write('<tr><td>' + firstName[i] + '<tr><td>' + lastName[i] + '</tr></td>')
-        //     }
-        // }
-        // document.write('<br>')
-
-        // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo', 'Do-Rag'];
-        // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
-        // var fullName = [];
-
-        // document.write('<table>');
-        // document.write('<tr><th>First Name</th><th>Last Name</th></tr>');
-
-        // for (var i = 0; i < firstName.length; i++) {
-        //     for (var j = 0; j < lastName.length; j++) {
-        //         fullName.push(firstName[i] + ' ' + lastName[j]);
-        //         document.write('<tr><td>' + firstName[i] + '</td><td>' + lastName[j] + '</td></tr>');
-        //     }
-        // }
-
-        // document.write('</table>');
-
-
-
-        // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo', 'Do-Rag'];
-        // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
-        // var fullName = [];
-        // for (var i = 0; i < firstName.length; i++) {
-        //     for (var j = 0; j < lastName.length; j++) {
-        //         document.write(firstName[i] + " " + lastName[j])
-        //         document.write('<br>');
-        //     }
-
-        // }
-        // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-
-        // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
-        // var fullNames = [];
-        // for (var i = 0; i < firstNames.length; i++) {
-        //     for (var j = 0; j < lastNames.length; j++) {
-        //         fullNames.push(firstNames[i] + lastNames[j]);
-        //     }
-        //     document.write('<br>')
-        // }
-
-
-        // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-        // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
-        // var fullNames = [];
-        // for(let j=0 ; j< firstNames.length ; j++){
-        //     for(let k=0 ; k < lastNames.length ; k++){
-        //         if(firstNames[j] === lastNames[k]){
-        //             fullNames.push(firstNames[j] , lastNames[k])
-        //         }
-        //     }
-        //     console.log(fullNames.join(' '));
-        // }
-
-        // alert('Menu');
-        // alert('1) Biryani \n 2) Tikka \n 3) Korma');
-
-        // let userfood = prompt('What do you want to order');
-        // let food = ['Biryani', 'Tikka', 'Korma'];
-        // let order = [];
-
-
-        // userfood = userfood.trim().toLowerCase();
-
-        // for (let i = 0; i < food.length; i++) {
-
-        //     let currentFood = food[i].toLowerCase();
-        //     if (userfood === currentFood) {
-        //         order.push(food[i]);
-
-        //         break;
-        //     }
-        // }
-        // console.log(order);
-
-        // for (let i = 0; i < 5; i++) {
-        //     for (let k = 0; k < i; k++) { // Changed i<4 to k<4
-        //         document.write(`*`);
-        //         // document.write(`k loop ====> ${k}`)
-        //     }
-        //     document.write('<br>');
-        // }
-
-
-        // for (let i = 2; i < 6; i++) {
-        //     console.log(i);
-        //     for (let k = 1; k <= 10; k++) {
-        //         document.write(`${i} X ${k} = ${i * k}` + '<br>')
-
-        //     }
-        //     document.write('<br>');
-        // }
-        // fullNames.push(prompt('enter your name').toLowerCase())
-        // console.log(fullNames);
-
-
-
-        // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-        // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
-        // var fullNames = [];
-
-        // for (var i = 0; i < firstNames.length; i++) {
-        //     for (var j = 0; j < lastNames.length; j++) {
-        //         if (firstNames[i][0] === lastNames[j][0]) {
-        //             fullNames.push(firstNames[i] + lastNames[j])
-        //         }
-        //     }
-        // }
-
-        // console.log(fullNames);
-
-
-
-
-
-        // var firstNames = ["مانگہ ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-        // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
-        // var fullNames = [];
-
-
-        // let fruitNames = [
-        //     "Apple",
-        //     "Banana",
-        //     "Orange",
-        //     "Grapes",
-        //     "Watermelon",
-        //     "Strawberry",
-        //     "Pineapple",
-        //     "Mango",
-        //     "Peach",
-        //     "Kiwi",
-        //     "Blueberry",
-        //     "Cherry",
-        //     "Pear",
-        //     "Plum",
-        //     "Raspberry",
-        //     "Apricot",
-        //     "Blackberry",
-        //     "Coconut",
-        //     "Lemon",
-        //     "Lime",
-        //     "Pomegranate",
-        //     "Avocado",
-        //     "Guava",
-        //     "Papaya",
-        //     "Cranberry",
-        // ];
-        // for (let index = 0; index < fruitNames.length; index++) {
-        //     // const element = fruitNames[index];
-        //     if(fruitNames[index][0] === 'A'){
-        //         document.write('The fruits names starts with letter A ' + fruitNames[index],'<br>');
-        //     }
-        //     else if(fruitNames[index][1,0] === 'B'){
-        //         document.write('The fruits names starts with letter B ' + fruitNames[index], '<br>');
-
-        //     }
-        //     else if(fruitNames[index][2,0] === 'C'){
-        //         document.write('The fruits names starts with letter C ' + fruitNames[index], '<br>');
-
-        //     }
-        // }
-
-
-        // var num = [10, 215, 300, 189, 22, 78, 42, 146, 143, 12];
-        // for (let i = 0; i < num.length - 1; i++) {
-        //     for (let j = 0; j < num.length - i - 1; j++) {
-        //         if (num[j] > num[j + 1]) {
-        //             let temp = num[j];
-        //             num[j] = num[j + 1];
-        //             num[j + 1] = temp;
-        //         }
-        //     }
-        // }
-
-        // console.log(num);
-
-        // var num = [10, 215, 300, 189, 22, 78, 42, 146, 143, 12];
-        // var decending = [];
-
-        // for (let i = 0; i < num.length - 1; i++) {
-        //     for (let j = 0; j < num.length - i - 1; j++) {
-        //         if (num[j] < num[j + 1]) {
-        //             let temp = num[j];
-        //             num[j] = num[j + 1];
-        //             num[j + 1] = temp;
-        //         }
-        //     }
-        // }
-        // decending = num.slice()
-        // console.log(decending);
-
-
-        // var id = ['ammar', 'burhan', 'ibrahim'];
-        // var userCheck = prompt('Enter name to check')
-        // for (let i = 0; i < id.length; i++) {
-        //     if (userCheck === id[i]) {
-        //         console.log('match found');
-        //     }
-        //     else{
-        //         console.log('Not found');
-        //     }
-        // }
-
-
-        // const fruits = ['apple', 'banana', 'orange', 'grapes', 'mango'];
-        // var user = prompt('Enter fruit to check ');
-        // var found = false ;
-
-
-        // for(let i=0 ; i < fruits.length ; i++){
-        //     if(user === fruits[i]){
-        //         found = true;
-        //     }
-        // }
-        // if(found === true){
-        //     alert(`${user} found`);
-        //
-        // }
-        // else{
-        //     alert(`${user} not found` )
-        // }
-
-        // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-        // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
-        // var fullNames = [];
-        // for (let i = 0; i < firstNames.length; i++) {
-        //     for (let j = 0; j < lastNames.length; j++) {
-        //         if (firstNames[i][0] == lastNames[j][0]) {
-        //             fullNames.push(firstNames[i] + lastNames[j])
-        //         }
-
-        //     }
-        // }
-        // console.log(fullNames);
-
-        // for (let i = 0; i < 5; i++) {
-        //     for (let j = 0; j < 10; j++) {
-        //         document.write(`${i} X ${j} = ${i*j}`, '<br>')
-        //     }
-        //     document.write('<br>')
-        // }
-
-
-        // var student = [ 'ammar' , 'burhan', 'ali'];
-        // for(let i = 0 ; i < student.length ; i++){
-        //     var userInput = prompt('Replace '+ student[i])
-        //     if(userInput !== null && userInput !== ''){
-        //         student[i] = userInput;
-        //     }
-        //     else{
-        //         console.log('No replacement '+ student[i]);
-        //     }
-
-        // }
-        // console.log(student);
-
-        // var student = ['ammar', 'burhan', 'ali'];
-        // for (let i = 0; i < student.length; i++) {
-        //     var userInput = prompt('Replace ' + student[i]);
-        //     if (userInput !== null && userInput !== '') {
-        //         student[i] = userInput;
-        //     }
-        //     else {
-        //         console.log('No replacement ' + student[i]);
-        //     }
-        // }
-        // var userName = student.push(prompt('Enter name'));
-        // var userName = student.push(prompt('Enter name'));
-        // var userName = student.push(prompt('Enter name'));
-        // var userName = student.push(prompt('Enter name'));
-        // console.log(student);
-
-
-
-
-        // var arr = [4, 5, 12, 14, 13, 23, 29, 28, 35, 33, 34, 37, 39, 44];
-        // var even = [];
-        // var odd = [];
-        // for (let i = 0; i < arr.length; i++) {
-        //     if (arr[i] % 2 == 0) {
-        //         even.push(arr[i])
-        //     }
-        //     else {
-        //         odd.push(arr[i])
-        //     }
-        // }
-
-        // console.log(even);
-        // console.log(odd);
-
-
-
-
-        // var student = ['tanveer', 'aliyan', 'bilal'];
-        // var check = 'Aliyan';
-        // var flag = false ;
-        // for (let i = 0; i < student.length; i++) {
-        //     if (check.toLowerCase() == student[i]) {
-        //         flag = true;
-        //         break;
-        //     }
-        // }
-        // if(flag == true){
-        //     console.log('Name found');
-        // }
-        // else{
-        //     console.log('Not Found');
-        // }
-
-
-        // var num = "5 6 7 8 9 ";
-        // for (i = num.length - 1; i >= 0; i--) {
-        //     console.log(num[i]);
-        // }
-
-        // var naam = 'bilal';
-        // for (let i = naam.length - 1; i >= 0; i--) {
-        //     console.log(naam[i]);
-        // }
-
-        // var number = '1 4 6 7';
-        // for (let i = number.length - 1; i >= 0; i--) {
-        //     console.log(number[i]);
-        // }
-
-        // var text = 'ammar';
-        // var re = text.split('').join('');
-        // console.log(re);
-
-
-
-        // let firstInput = +prompt('Enter first number');
-        // let secondInput = + prompt('Enter second number');
-        // if(firstInput > secondInput) {
-        //     document.write(`${firstInput} is greater than ${secondInput}`)
-        // }
-        // else if(firstInput < secondInput) {
-        //     document.write(`${firstInput} is less than ${secondInput}`)
-        // }
-        // else if(firstInput === secondInput) {
-        //     document.write(`${firstInput} is equal to ${secondInput}`)
-        // }
-
-        // let number_1 = +prompt('Enter first number');
-        // let number_2 = +prompt('Enter second number');
-        // let number_3 = +prompt('Enter third number');
-
-        // let total = number_1 * number_2 * number_3;
-        // if(total > 0){
-        //     document.write(`${total} is a positive number`);
-        // }
-        // else{
-        //     document.write(`${total} is a negative number`);
-
-        // }
-
-        // let number_1 = +prompt('Enter first number');
-        // let number_2 = +prompt('Enter second number');
-        // let number_3 = +prompt('Enter third number');
-
-        // let smallest;
-        // let middle;
-        // let highest;
-        // if (number_1 <= number_2 && number_1 <= number_3) {
-        //     smallest = number_1
-        //     if (number_2 <= number_3) {
-        //         middle = number_2;
-        //         highest = number_3;
-        //     }
-        //     else {
-        //         middle = number_3;
-        //         highest = number_2;
-        //     }
-        // } else if (number_2 <= number_1 && number_2 <= number_3) {
-        //     smallest = number_2;
-        //     if (number_1 <= number_3) {
-        //         middle = number_1
-        //         highest = number_3
-        //     } else {
-        //         middle = number_3
-        //         highest = number_1
-        //     }
-        // } else if (number_3 <= number_1 && number_3 <= number_2) {
-        //     smallest = number_3;
-        //     if (number_2 <= number_1) {
-        //         middle = number_1;
-        //         highest = number_2;
-        //     } else {
-        //         middle = number_2;
-        //         highest = number_1;
-        //     }
-        // }
-        // document.write(smallest + ' ' + middle + ' ' + highest);
-
-
-
-        // var student = ['ammar', 'bilal', 'umer', 'mimi', 'azaan'];
-        // var del = student.join(' , ');
-        // // var del = student.splice(4, 1);
-        // // console.log(del + ' is deleted');
-        // console.log(student);
-        // console.log(del);
-
-        // var age = [8, 13, 16, 18, 21, 22, 32, 37];
-        // var kids = [];
-        // var younger = [];
-        // var adults = [];
-        // for (let i = 0; i < age.length; i++) {
-        //     if (age[i] >= 8 && age[i] <= 16) {
-        //         kids.push(age[i])
-        //     }
-        //     else if (age[i] >= 18 && age[i] <= 22) {
-        //         younger.push(age[i])
-        //     }
-        //     else if (age[i] >= 23 && age[i] <= 37) {
-        //         adults.push(age[i])
-        //     }
-        // }
-        // console.log(kids);
-
-        // let x = 10;
-        // let x = 20; // Error: Identifier 'x' has already been declared
-
-        // console.log(x);
-
-        // var num = 23
-        // var num2 = '23'
-        // alert(num + num2);
-
-
-        // var num1 = 1
-        // var num2 = num1--;
-        // console.log(num1);
-        // if (num1 === num2) {
-        //     console.log("matched")
-        // }
-        // else {
-        //     console.log("not-matched")
-        // }
-
-        // var num = 9;
-        // num++;
-        // console.log(num++);
-
-        // var num = 1;
-        // var num2 = num++;
-        // console.log(num);
-        // console.log(num2);
-        // if(num !== num2){
-        //     console.log(true);
-        // }else{
-        //     console.log(false);
-        // }
-
-
-        // const namesArray1 = [
-        //     "Liam",
-        //     "Olivia",
-        //     "Noah",
-        //     "Emma",
-        //     "Oliver",
-        //     "Ava",
-        //     "Elijah",
-        //     "Charlotte",
-        //     "William",
-        //     "Sophia"
-        // ];
-
-        // const namesArray2 = [
-        //     "James",
-        //     "Amelia",
-        //     "Logan",
-        //     "Isabella",
-        //     "Lucas",
-        //     "Mia",
-        //     "Mason",
-        //     "Harper",
-        //     "Ethan",
-        //     "Evelyn"
-        // ];
-        // const newName = [];
-        // for (let i = 0; i < namesArray1.length; i++) {
-
-        //     for (let j = 0; j < namesArray2.length; j++) {
-        //         if (namesArray1[i][0] == namesArray2[j][0]) {
-        //             newName.push(namesArray1 + namesArray2)
-        //         }
-        //     }
-        // }
-
-        // console.log(newName);
-
-
-        // var username = 'anas';
-        // var firstChar = username.slice(0, 1).toUpperCase();
-        // var othersChar = username.slice(1, username.length).toLowerCase();
-        // console.log(firstChar + othersChar);
-
-        // var month = prompt('Enter month name');
-        // var charInMonth = month.length;
-        // if(charInMonth > 3){
-        //     var shortForm = month.slice(0,3);
-        //     console.log(shortForm.toUpperCase());
-        // }
-
-
-
-
-
-
-        // var userName = 'my name is ammar';
-        // for (let i = 0; i < userName.length; i++) {
-        //     console.log(userName.slice(i,i+5));
-        // }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
 
+</body>
+<script>
+  // function GenerateNumber() {
+  //   const random = Math.floor(Math.random() * 9) + 1;
+    // console.log(random);
+  // }
+
+  // function changeColor() {
+  //   var red = Math.random() * 255 + 1;
+  //   var green = Math.random() * 255 + 1;
+  //   var blue = Math.random() * 255 + 1;
+  //   const rgbColor = `rgb(${red}, ${green}, ${blue})`;
+
+  // }
+
+  // function guessGame() {
+  //   const random1 = Math.floor(Math.random() * 9) + 1;
+  //   console.log(random1);
+  //   const userValue = prompt("Enter your number");
+  //   if (random1 == userValue) {
+  //     alert(`${random1} == ${userValue}`);
+  //   } else {
+  //     alert(`${random1} ! == ${userValue}`);
+  //   }
+  // }
+
+  // var gender = prompt('enter your Gender')
+  // var points = 0
+  // if(gender === 'male'){
+  // console.log('true');
+  // points = 10
+  // }
+  // else{
+  //     console.log('false');
+  //     points =5
+  // }
+  // console.log(points);
+  // console.log(a === 'jjj');
+
+  // var totalCost = +prompt('enter your totalCost')
+  // var materialsCost =+prompt('enter your materialsCost')
+  // var laborCost = +prompt('enter your laborCost')
+  // //      50   ===      10+40
+  // if (totalCost === materialsCost + laborCost) {
+  //     console.log('true' ,"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
+  // }else{
+  // console.log('false',"totalcost====>" , totalCost , 'materialsCost ====>',materialsCost, 'laborCost===>',laborCost );
+  // }
+
+  // var a = 10 , b= 5 , x=2 , y=8
+  // //  10         5
+  // if (x + y === a - b) {
+
+  // }
+
+  // var yourTicketNumber = 487209
+  //  if (yourTicketNumber !== 487208) {
+  //      alert("Better luck next time.");
+  //      }
+
+  // 1=Mon
+  // 2= tue
+  // 3 =wed
+  // 4= thur
+  // 5 = fri
+  // 6 = sat
+  // 7 = sun
+  // 1 t0 7
+  // plz your number type is 1 to 7
+  // var weekday = +prompt('enter your Weekday number')
+  // if(weekday === 1){
+  //     console.log('Mon');
+  // }
+  // else if(weekday == 2){
+  //     console.log('Tue');
+  // }
+  // else if(weekday == 3){
+  //     console.log('Wed');
+  // }
+  // else if(weekday == 4){
+  //     console.log('Thur');
+  // }
+  // else if(weekday == 5){
+  //     console.log('Fri');
+  // }
+  // else if(weekday == 6){
+  //     console.log('Sat');
+  // }
+  // else if(weekday == 7){
+  //     console.log('Sun');
+  // }else{
+  //     console.log('plz type  your number is 1 to 7');
+  // }
+
+  // console.log(5 === '5');
+
+  // var userName = prompt('enter userName')
+  // var password = prompt('enter Password')
+  // if(userName == 'xyz@gmail.com' || password == 123  ){
+  // console.log("login");
+  // }else{
+  //     console.log("plz try again");
+  // }
+
+  // var weight = 310
+  // var time   = 6
+
+  //  if (weight > 300 || time < 6) {
+  //     alert("Come to our tryout!");
+  //     }
+  //     else {
+  //     alert("Come to our cookout!");
+  //     }
+
+  // var marks = 20
+
+  // if(marks >= 0 && marks <= 20){
+  //     console.log('fail');
+  // }
+  // else if(marks >20 || marks <40){
+  // console.log('E');
+  // }
+  // else if(marks >40 || marks <60){
+  // console.log('D');
+  // }
+  // else{
+  //     console.log('pass');
+  // }
+
+  // var userInput = +prompt("Enter number to see your grade.");
+  // if (userInput > 0 && userInput <= 20) {
+  //     document.write("You Failed!!");
+
+  // }
+  // else if (userInput >= 21 && userInput <= 30){
+  //     document.write("You got D grade");
+  // }
+  // else if (userInput >= 31 && userInput<= 35){
+  //     document.write("You got C grade ");
+
+  // }
+  // else if (userInput >=36 && userInput<= 41 ){
+  //     document.write("You got B grade");
+  // }
+  // else if (userInput >= 42 && userInput<= 50){
+  //     document.write("You got A grade");
+  // }
+
+  // var userNum = +prompt('Enter number');
+  // document.write(`Table of ${userNum} `+ "<br>");
+  // document.write(`${userNum} X 1 = ${userNum*1}` + '<br>');
+  // document.write(`${userNum} X 2 = ${userNum*2}` + '<br>');
+  // document.write(`${userNum} X 3 = ${userNum*3}` + '<br>');
+  // document.write(`${userNum} X 4 = ${userNum*4}` + '<br>');
+
+  //Arrays
+  //Push --- Adds element in the last
+  //Unshift ---- adds elements in the first of the array
+  //     var dailyActivities = ['Breakfast', 'Lunch'];
+  //     console.log(dailyActivities);
+
+  //     dailyActivities.push('Brunch', 'Dinner');
+  //     console.log(dailyActivities)
+
+  //     dailyActivities.push('Coding');
+  //     dailyActivities.push('Good Night');
+
+  //     console.log(dailyActivities);
+
+  //     dailyActivities.unshift('Exercise');
+  //     dailyActivities.unshift('Fajr-Namaz');
+  //     dailyActivities.unshift('Good Morning');
+  //     console.log(dailyActivities);
+
+  // var friends = ['Ammar', 'Iqrash'];
+  // console.log(friends);
+  // console.log(friends[0]);
+  // console.log(friends[1]);
+
+  // friends.push('Anas', 'Shoaib');
+  // console.log(friends);
+  // console.log(friends[2]);
+  // console.log(friends[3]);
+
+  // friends.unshift('Talha', 'Kashan');
+  // console.log(friends);
+  // console.log(friends[0]);
+  // console.log(friends[1]);
+
+  // friends.unshift('Ali', 'Biccu');
+  // console.log(friends);
+  // console.log(friends[0]);
+  // console.log(friends[1]);
+
+  // friends.push('Saif');
+  // console.log(friends);
+  // console.log(friends[8]);
+
+  // console.log(friends[0]);
+  // console.log(friends[1]);
+  // console.log(friends[2]);
+  // console.log(friends[3]);
+  // console.log(friends[4]);
+  // console.log(friends[5]);
+  // console.log(friends[6]);
+  // console.log(friends[7]);
+  // console.log(friends[8]);
+
+  //removes 4th index element
+  // var x = numbers.splice(4, 1);
+  // //splice(index,no of elements)
+
+  // //console:4th index:[ 5 ]
+  // console.log(x);
+
+  // var number =[1 ,2 ,3 , 4 , 5 ,6 , "Ammar" , "Karachi" , "Ayeza"];
+  // number.splice();
+  // console.log(number);
+
+  // var array = [1, 2, 3, 4, 5];
+  // console.log(array);
+  // var removed = array.splice(2);
+  // console.log(array);
+
+  // array.splice(2 , 0 ,'a' , 'b');
+  // console.log(array);
+
+  // array.splice(1 , 1 , 'x');
+  // console.log(array);
+
+  // console.log(removed);
+
+  // var check = +prompt('Enter number to check');
+  // var num = [1 , 20 , 30 , 50 , 10 , 35 ,15];
+  // var found = false //flag
+  // for(var i= 0 ; i<num.length ; i++){
+  //     if (num[i]=== check){
+  //         found = true;
+  //         break;
+  //     }
+  // }
+  // if(found === true){
+  //     console.log('Found');
+  // }
+  // else{
+  //     console.log('Not Found');
+  // }
+
+  // var UserNum = +prompt('Enter your  number (Only enter number from 1-20)');
+  // var number = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+  // var found = false;
+  // for (var i = 0; i < number.length; i++) {
+  //     if (UserNum == number[i]) {
+  //         found = true;
+  //         break;
+  //     }
+  // }
+  // if (found === ) {true
+  //     console.log(`${UserNum} is an even number`);
+  // }
+  // else {
+  //     console.log(`${UserNum} is an odd number`);
+  // }
+
+  // var table = +prompt('Which table you want');
+  // for (var i = 1; i <= 10; i++) {
+  //     console.log(`${table * i}`);
+  // }
+  // var userInput = prompt("Enter your grocessary")
+  // var grocessasry = ['Ata', 'Ghee', 'Sugar'];
+  // var correct = false;
+
+  // for (var i = 0; i < grocessasry.length; i++) {
+  //     if(userInput === grocessasry[i]){
+  //         correct = true;
+  //         break;
+  //     }
+  // }
+  // if(correct === true){
+  //     console.log(`${userInput} is in basic `);
+  // }
+  // else{
+  //     console.log(`${userInput} no its not in basic`);
+  // }
+
+  // var userNames = prompt(`Enter your name`); // value from user
+  // var name_1 = ['Burhan', 'Ali', 'Qasim', 'Saif']; // array
+  // var nameFound = false;
+  // for (i = 0; i < name_1.length; i++) {
+  //     if (userNames == name_1[i]) {
+  //         nameFound = true;
+  //         break
+  //     }
+  // }
+  // if (nameFound == true) {
+  //     document.write(`${userNames} is selected in the team`);
+  // }
+  // else {
+  //     document.write(`${userNames} is not selected in the team`);
+  // }
+
+  // var InputNum = +prompt('Enter number');
+  // var num = [1, 2, 3 , 4, 5, 6, 7, 8];
+  // for (i = 0; i <= num.length; i++) {
+  //     document.write(i + "<br>" + "<hr>");
+
+  // }
+
+  // // Define an array
+  // var numbers = [5, 10, 15, 20, 25];
+
+  // // Initialize a variable to store the sum
+  // var sum = 0;
+
+  // // Loop through the array and add each element to the sum
+  // for (var i = 0; i < numbers.length; i++) {
+  //     sum += numbers[i];
+  // }
+
+  // // Print the sum
+  // console.log("The sum of the elements in the array is: " + sum);
+
+  // var sum = 0 ;
+  // var number = [1, 2, 3, 4, 5, 6];
+  // for (var i = 0; i < number.length; i++) {
+  //     sum += number[i];
+  // }
+  // console.log(sum);
+  // var number = [2 ,3 ,5 , 6 ,6];
+  // var add = 0;
+  // for(var i=0 ; i < number.length ; i++){
+  //     add += number[i];
+  // }
+  // console.log(add);
+
+  // var arr = ['rizwan' ,'ali' ,'ahmed','faraz','samad'];
+  // arr.unshift('aijaz' , 'hassan' , 'daniyal');
+  // for(i=0 ; i<arr.length ; i++){
+  //     document.write(arr[i] + '<tr>'+ '<>' + '<>');
+  // }
+
+  // arr.push('burhan' , 'wajid');
+
+  // var userInput = prompt("Enter your name");
+
+  // var present = false;
+
+  // for(var i = 0 ; i < arr.length ; i++){
+
+  //     if(userInput == arr[i]){
+  //         present = true;
+  //         break
+  //     }
+  // }
+  // if(present == true){
+  //     document.write(`${userInput} is a team member`)
+  // }
+  // else{
+  //     document.write(`${userInput} not found`);
+  // }
+
+  // var table = +prompt('Enter table');
+  // var tableStart = +prompt(`Enter start point of table`);
+  // var tableEnd = +prompt(`Enter end point`)
+  // document.write(`<h1>Table of ${table}</h1>` + '<br>');
+  // for (i = tableStart; i <= tableEnd; i++) {
+  //     document.write(`${table} x ${i} = ${table * i}` + '<br>' + '<hr>');
+  // }
+
+  // var startNum = +prompt('First Number');
+  // var lastNum = +prompt(`Last Number`);
+  // for (i = 0; i <= 100; i++) {
+  //     console.log(i);
+  // }
+  // console.log('Hello');
+  // var userInput = prompt('Enter Gross');
+  // var gross = ['ata', 'ghee', 'oil'];
+  // var basic = false;
+  // for (i = 0; i < gross.length; i++) {
+  //     if (userInput === gross[i]) {
+  //         basic = true;
+  //         break;
+
+  //     };
+  // }
+  // if (basic === true) {
+  //     document.write(`${userInput} is the basic of all grossery `);
+  // }
+  // else {
+  //     document.write(`${userInput} is not in basic grossey`);
+  // };
+  // var i = 0;
+  // console.log(i);
+  // i = i + 5;
+  // console.log(i);
+  // i = i + 5;
+  // console.log(i);
+
+  // for(var i=0 ; i < 10; i= i+2){
+  //     console.log(i);
+  // }
+
+  // var names = ['ammar', 'ahmed'];
+  // var userInput = prompt('Enter name here');
+  // names.push("ali" , "burhan");
+  // // console.log(names);
+  // var nameFound = false;
+  // for (var i = 0; i < names.length; i++) {
+  //     if (userInput == names[i]) {
+  //         nameFound = true;
+  //         break;
+  //     }
+  // }
+  // if (nameFound == true) {
+  //     console.log(`${userInput} name is found`);
+  // }
+  // else {
+  //     console.log(`${userInput} name not found`);
+  // }
+
+  // var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+  // var cityToCheck = prompt("Enter your city");
+  // var matchFound = false;
+  // for(var i =0 ; i<=4 ; i++){
+  //     if(cityToCheck == cleanestCities[i]){
+  //         alert("Its clean city")
+  //     }
+  //     else{
+  //         alert("Not found");
+  //     }
+  // }
+  // for(var i =0 ; i < cleanestCities.length ; i++){
+  //     if(cityToCheck == cleanestCities[i]){
+  //         matchFound = true;
+  //         break;
+  //     }
+
+  // }
+  // if(matchFound == true){
+  //     alert("Its a clean city");
+  // }
+
+  // else{
+  //     alert("Not a clean city");
+  // }
+  // var userInput = prompt("Enter your name");
+  // var names = ['ammar', 'burhan'];
+  // var nameFound = false;
+
+  // for (var i = 0; i < names.length; i++) {
+  //     if (userInput === names[i]) {
+  //         nameFound = true;
+  //         break;
+  //     }
+  // }
+  // if (nameFound === true) {
+  //     console.log('Name found');
+  // } else {
+  //     console.log('Name not found');
+  // }
+
+  //                     for(var i = 0 ; i <  10 ; i++){
+  //     document.write("Ammar" ,i+ '<br>');
+  // };
+
+  // for (i = 10; i >= 1; i--) {
+  //     console.log(i);
+  // }
+
+  // for(var i =100 ; i >= 1 ; i--){
+  //     console.log(i);
+
+  // }
+
+  // for (var i = 0 ; i <=100 ; i++){
+  //     console.log(i);
+  // }
+
+  // for (var i = 0; i <= 100; i = i + 10) {
+  //     console.log(i);
+  // }
+
+  // var arr = [5, 6, 7, 8, 2, 12];
+  // // arr.length;
+  // // console.log(arr);
+  // for (var i = 0; i < arr.length; i++) {
+  //     document.write('Number ', i + 1 + " ", arr[i] + "<br>" + "<hr>");
+  // };
+
+  // var arr = [4, 5, 12, 14, 13, 23, 29, 28, , 33, 34, 37, 39, 44];
+  // var even = [];
+  // var odd = [];
+  // for (var i = 0; i < arr.length; i++) {
+  //     if (arr[i] % 2 === 0) {
+  //         even.push(arr[i]);
+  //     }
+  //     else {
+  //         odd.push(arr[i]);
+  //     }
+  // }
+
+  // document.write("Even Number are " + even + '<br>');
+  // document.write("Odd Number are " + odd);
+
+  // var names = ['John', 'Alice', 'Bob'];
+  // var namArray = [];
+  // // console.log(namArray);
+  // var userName = prompt("Check if the name is in the list or added");
+  // var nameFound = false;
+  // for (var i = 0; i < names.length; i++) {
+  //     if (userName === names[i]) {
+  //         nameFound = true;
+  //         break;
+  //     }
+  // }
+  // if (nameFound === true) {
+  //     document.write(`This name is already in the list`);
+
+  // }
+  // else {
+  //     namArray.push(userName);
+  //     document.write(`${userName} is added to the list`);
+  // }
+
+  // var num = [1, 2, 4, 3 ,45, 123];
+  // var sum = 0;
+  // for (i = 0; i < num.length; i++) {
+  //     sum += num[i]
+  //     if(num[i]%2 === 0){
+  //         console.log('even',num[i]);
+  //     }
+  //     else{
+  //         console.log('odd' ,num[i]);
+  //     }
+  // }
+  // console.log(sum);
+
+  //     var namE = ['ammar', 'ahmed', 'ali', 'daniyal'];
+  //     var found =[]
+  //    for(i=0; i<namE.length; i++){
+  //     if(namE[i][0]==='a'){
+  //         console.log(namE[i] +'Found');
+
+  //     }
+  //     else{
+  //         console.log(namE[i]+'Not Found');
+  //     }
+  //    }
+  // 0         1         2       3       4      5            6         7         8       9
+  // var firstName = ['burhan ', ' wajid ', ' taha ', ' talha ', ' zain ', ' mubeen ', ' ibrahim ', ' kashan ', 'anas', ' iqrash', ' iqra', ' battol'];
+  // var lastName = ['wara ', ' maham ', ' maryam ', ' malik ', ' komal ', ' zobia ', ' ammar ', ' ali ', 'malik ', ' eman', ' alisba', ' anisha', ' iraj'];
+  // var combine = [];
+  // for (var i = 0; i < firstName.length; i++) {
+  //     for (var j = 0; j < lastName.length; j++) {
+  //         if (firstName[i][0] === lastName[j][0]) {
+  //             combine.push(firstNames[i] + lastNames[j])
+  //         }
+  //     }
+  // }
+  // document.write(combine)
+
+  // for (i = 0; i < cousins.length; i++) {
+  //     if (cousins[i][2, 0] === 't') {
+  //         console.log('Names which starts with letter t are', cousins[i]);
+  //         namt++;
+  //     }
+  //     if (cousins[i][6, 0] === 'i') {
+  //         console.log('Names which starts with letter i are', cousins[i]);
+  //         nami++;
+  //     }
+  //     if (cousins[i][5, 0] === 'm') {
+  //         console.log('Names which starts with letter m are', cousins[i]);
+  //         namm++;
+  //     }
+  //     if (cousins[i][1, 0] === 'w') {
+  //         console.log('Names which starts with letter w are', cousins[i]);
+  //         namw++;
+  //     }
+  // }
+  // console.log(' Total count for letter t :' + namt++);
+  // console.log(' Total count for letter i :' + nami++);
+  // console.log(' Total count for letter m :' + namm++);
+  // console.log(' Total count for letter w :' + namw++);
+
+  // var car = ['honda', 'suzuki', 'toyota'];
+  // for (var i = 0; i < car.length; i++) {
+  //     if (car[i] === 'honda') {
+  //         console.log('Cvic is best company',car[i]);
+  //     }
+  //     else if(car[i] === 'suzuki'){
+  //         console.log('Hi Roof is best', car[i]);
+  //     }
+  //     else if(car[i]=== 'toyota'){
+  //         console.log('corolla is best' , car[i]);
+  //     }
+  // }
+
+  // var number = [1, 3, 5, 7, 9, 12, 14, 15, 17, 18, 19, 20, 22, 23, 43, 65];
+  // var even = [];
+  // var odd = [];
+
+  // for (let i = 0; i < number.length; i++) {
+  //     if (number[i] % 2 === 0) {
+  //         console.log('At he index number', i + 1, number[i], 'is an even number');
+  //         even.push(number[i]);
+  //     }
+  //     else {
+  //         console.log('At he index number', i + 1, number[i], 'is an odd number');
+  //         odd.push(number[i]);
+  //     }
+
+  // }
+  // console.log(even);
+  // console.log(odd);
+
+  // var students = ['ahmed', 'bhai', 'ali', 'burhan', 'badmash', 'asim'];
+  // var a = [];
+  // var b = [];
+  // for (var i = 0; i < students.length; i++) {
+  //     if (students[i][0] === 'a') {
+  //         console.log('There  students which have starting letter a are', i, students[i]);
+  //         a.push(students[i]);
+  //     }
+  //    else if (students[i][1, 0] === 'b') {
+  //         console.log('There students which have starting letter b are', i, students[i]);
+  //         b.push(students[i]);
+  //     }
+
+  // }
+  // console.log(a);
+  // console.log(b);
+
+  // var age = [8, 10, 13, 17, 20, 23, 26, 28, 30, 32,14,22,54];
+  // console.log(age);
+  // var youngStudents = [];
+  // var AdultCount = 0;
+  // var youngCount = 0;
+  // var adultStudents = [];
+  // for (var i = 0; i < age.length; i++) {
+  //     if (age[i] <= 20) {
+  //         console.log('Young students in school ', age[i]);
+  //         youngStudents.push(age[i]);
+  //         youngCount++;
+  //     }
+
+  //     else {
+  //         console.log('Adult students in school ', age[i]);
+  //         adultStudents.push(age[i]);
+  //         AdultCount++;
+  //     }
+  // }
+
+  // console.log(adultStudents);
+  // console.log(youngStudents);
+  // console.log('Total Adult Student' , AdultCount);
+  // console.log('Total Young Student' , youngCount);
+
+  // var number = [2, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 17, 20, 22, 23, 25, 27, 29, 30];
+  // var even = [];
+  // var odd = [];
+  // var evenNum = 0;
+  // var oddNum = 0;
+  // for (var i = 0; i < number.length; i++) {
+  //     if (number[i] % 2 === 0) {
+  //         console.log('Even number', number[i]);
+  //         even.push(number[i]);
+  //         evenNum++;
+  //     }
+  //     else {
+  //         console.log('Odd number ', number[i]);
+  //         odd.push(number[i]);
+  //         oddNum++
+  //     }
+  // }
+  // console.log(even);
+  // console.log(odd);
+  // console.log('Total even number are ', evenNum);
+  // console.log('Total odd number are ', oddNum);
+
+  //  document.write('<center>')
+  // for (var i = 0; i < 8; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 7; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 6; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 5; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 4; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 3; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 2; i++) {
+  //     document.write('*');
+  // }
+  // document.write('<br>')
+  // for (var i = 0; i < 1; i++) {
+  //     document.write('*');
+  // }
+
+  // document.write('</center');
+
+  // console.log(studentsData[1][0]);
+
+  // let students_1 = ['Jack', 24];
+  // let students_2 = ['Sara', 23];
+  // let students_3 = ['Peter', 24];
+
+  // let studentsData = [students_1 , students_2 , students_3];
+  // console.log(studentsData);
+
+  // let x = [['Ammar', 12], ['Burhan', 23], ['Ali', 32]];
+  // //acess the first element of an array
+  // console.log(x[0]);
+  // //acess the first word
+  // console.log(x[0][0]);
+  // //acess the second element of an array
+  // console.log(x[1]);
+  // //acess the first word in the second element}
+  // console.log(x[1][0]);
+
+  // var num = [2, 3, 6, 8, 10];
+  // var userFind = 6;
+  // var add = 0;
+
+  // for (let i = 0; i < num.length; i++) {
+  //     if (num[i] == userFind) {
+  //         console.log(true);
+  //     }
+  //     add++;
+
+  // }
+  // //add ++ 0
+  // //add ++ 1
+  // //add ++ 2
+  // //add ++ 3
+  // //add ++ 4
+  // //add ++ 5
+  // console.log(add);
+
+  // var num = ['ammar', 'hira', 'aliyan'];
+  // var check = num.includes('ammar');
+  // console.log(check);
+
+  //Area of rectangle
+  // var lenghtOfRectangles = parseInt(prompt('Enter lenght of your rectangle'));
+  // var widthOfRectangle = parseInt(prompt('Enter width of your rectangle'));
+  // var muliply = lenghtOfRectangles*widthOfRectangle;
+  // if(muliply%2===0){
+  //     document.write(`Area of rectangle =${muliply} .`+'<br>'+` ${muliply} is an even number`);
+  // }
+  // else{
+  //     document.write(`Area of rectangle = ${muliply} .`+'<br>'+`${muliply} is an odd number`);
+
+  // }
+
+  //Even or Odd
+  // var userNum = +prompt('Enter number');
+  // if(userNum%2 === 0){
+  //     document.write(`This number is even`);
+
+  // }else{
+  //     document.write(`This number is odd`);
+  // }
+
+  // var age = 11;
+  // var price = 500;
+  // var discount = 30;
+  // if (age > 10 && age < 20) {
+  //     discount = 400;
+  //     alert(discount);
+  // }
+  // else {
+  //     var amount = price - discount;
+  //     alert(amount);
+  // }
+
+  // Nested for loop
+  // Example 1: Nested for loops
+  // for (let i = 0; i < 2; i++) { // 0
+
+  //     for (let j = 0; j < 3; j++) {//0
+  //         document.write(`${i}  ${j}`);
+
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // for(var i=0 ; i<=5; i++){
+  //     for(var j=0 ; j<=i*2+1 ;j++){
+  //         document.write(`*`)
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // for (var i = 0; i < 8; i++) {
+  //     for (var j = 0; j < 4; j++){
+  //         document.write(`${i}${j}`);
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // for (var i = 0; i <10 ; i++){
+  //     for(var j=0 ; j<=i ; j++){
+  //         document.write(`*`);
+  //     }
+  //     document.write('<br>');
+  // }
+  // for (var i = 0; i < 5; i++) {
+  //     for (var j = 0; j < i; j++) {
+  //         document.write(`${i} ${j}`);
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // var students =['ammar ' ,' aliyan ' , ' shahzad',' zaryab' , ' osama' , ' hassan'];
+  // var friends =['bicu' ,'anas','saif'];
+
+  // var text = students.concat(friends);
+  // document.write(text)
+  // for (let i = 5; i <= 60; i = i + 5){
+  //     console.log(i);
+  // }
+
+  // for (let i = 0; i < 5; i++) {
+  //     for (let j = 0; j < i; j++) {
+  //         document.write(`*`)
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // var students = ['ammar', 'amir', 'burhan', 'aliyan', 'batool', 'asim'];
+  // var countA = 0;
+
+  // for (var i = 0; i < students.length; i++) {
+  //     if (students[i][0] === 'a') {
+  //         console.log(students[i]);
+  //         countA++;
+
+  //     }
+  // }
+  // console.log('Total a = ' + countA);
+
+  // document.write('<center>')
+  // for (var i = 0; i < 30; i++) {
+  //     for (var j = 0; j < i; j++) {
+  //         document.write('*')
+  //     }
+  //     document.write('<br>')
+  // }
+  // for (var a = 29; a > 0; a--) {
+  //     for (var b = a; b > 0; b--) {
+  //         document.write('*')
+  //     }
+  //     document.write('<br>')
+  // }
+  // document.write('</center>')
+  // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  // var userInput = +prompt('Enter')-1;
+  // console.log(fruits[userInput]);
+  // console.log(fruits[userInput ===1 ('JS')]);
+  // if (userInput === 1) {
+  //     document.write(fruits[0])
+  // }
+  // if (userInput === 2) {
+  //     document.write(fruits[1])
+  // }
+
+  // for(var i=0 ; i<10 ; i++){
+  //     document.write(i)
+  // }
+
+  // console.log(fruits);
+  // var students = ['ammar', 'hasan', 'saif', 'farooq'];
+
+  // for (var i = 0; i < students.length; i++) {
+  //     let userInput = prompt('Replace ' + students[i]);
+
+  //     if (userInput !== null && userInput !== '') {
+  //         students[i] = userInput;
+  //     } else {
+  //         console.log('No replacement provided for ' + students[i] + ', keeping the original name.');
+  //     }
+  // }
+  // console.log(students);
+
+  // var fruits = ['apple', 'banana', 'apricot', 'mango'];
+  // for (var i = 0; i < fruits.length; i++) {
+  //     var userInput = prompt('Replace ' + fruits[i]);
+  //     if (userInput !== null && userInput !== '') {
+  //         fruits[i] = userInput;
+  //     }
+  //     else{
+  //         console.log('No repalcement in element ' + fruits[i]);
+  //     }
+  // }
+  // console.log(fruits);
+
+  // var numbers = [10, 20, 30, 40, 50];
+  // var sum = 0;
+  // for (var i = 0; i < numbers.length; i++) {
+  //     var userInput = +prompt("Enter to add a number to " + numbers[i]);
+  //     if (userInput !== null && userInput !== '') {
+  //         numbers[i] += userInput;
+  //         sum += numbers[i];
+  //     }
+  //     else {
+  //         console.log('Invaild value you can only write numbers');
+  //     }
+  // }
+  // console.log('Update numbers ' + numbers);
+  // console.log('Sum of updated ' + sum);
+
+  // let numbers = [10, 20, 30];
+  // let sum = 0 ;
+  // for(var i=0 ; i<numbers.length ;i++){
+  //     let userInput = +prompt('Enter number too add +'+ numbers[i]);
+  //     if(userInput !== null && userInput !== ''){
+  //         numbers[i]+=userInput
+  //         sum+=numbers[i]
+  //     }else{
+  //         console.log('Invalid value');
+  //     }
+  // }
+  // console.log('Updated values '+numbers);
+  // console.log('Total of Updated values '+ sum);
+
+  //     let x = 5;
+  //     let y = 10;
+  //     let z = 15;
+  //     x = y = z;
+  //    console.log(x);
+
+  // var fruits = ['Mango', 'Orange', 'Banana'];
+  // for (var i = 0; i < fruits.length; i++) {
+  //     let user = prompt('Replace ' + fruits[i]);
+  //     if(user !== null && user !== ''){
+  //         fruits[i] = user
+  //     }
+  //     else{
+  //         console.log('No replacement in '+ fruits[i]);
+  //     }
+  // }
+  // console.log(fruits);
+
+  //     var num = [10, 12, 43];
+  //     for (var i = 0; i < num.length; i++) {
+  //         let userInput = +prompt('Enter value to add with ' + num[i]);
+  //         if (userInput !== null && userInput !== '') {
+  //             num[i] += userInput
+  //         } else {
+  //             console.log('Invalid');
+  //         }
+  //     }
+  //     console.log(num);
+
+  // var num = [2, 4, 5, 6, 7, 8, 9, 10];
+  // var even = [];
+  // var odd = [];
+  // var totalsum=0;
+  // var counteven = 0;
+  // var countodd = 0;
+  // for (var i = 0; i < num.length; i++) {
+  //     let userInput =+prompt('Enter value to add with '+ num[i]) ;
+  //     if(userInput !==null && userInput!== ''){
+  //         num[i]+=userInput;
+  //         totalsum+=num[i]
+  //     }else{
+  //         console.log(`Nothing added in number `+ num[i] );
+  //     }
+  //     if (num[i] % 2 === 0) {
+  //         even.push(num[i]);
+  //         counteven++;
+  //     } else {
+  //         // console.log(`Odd numbers ` + num[i]);
+  //         odd.push(num[i]);
+  //         countodd++;
+  //     }
+  // }
+  // console.log(num);
+  // console.log('Even numbers ' + even+' .Total even numbers are '+ counteven);
+  // console.log('Odd numbers ' + odd + ' .Total odd numbers are '+ countodd);
+  // console.log('The total is ' +totalsum);
+
+  // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo'];
+  // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
+  // var fullName = [];
+  // document.write('<table>')
+  // document.write('<tr><th>First Name</th><th>Last Name</th></tr>');
+  // for (var i = 0; i < firstName.length; i++) {
+  //     for (var j = 0; j < lastName.length; j++) {
+  //         fullName.push(firstName[i] + ' ' + lastName[j])
+  //         document.write('<tr><td>' + firstName[i] + '<tr><td>' + lastName[i] + '</tr></td>')
+  //     }
+  // }
+  // document.write('<br>')
+
+  // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo', 'Do-Rag'];
+  // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
+  // var fullName = [];
+
+  // document.write('<table>');
+  // document.write('<tr><th>First Name</th><th>Last Name</th></tr>');
+
+  // for (var i = 0; i < firstName.length; i++) {
+  //     for (var j = 0; j < lastName.length; j++) {
+  //         fullName.push(firstName[i] + ' ' + lastName[j]);
+  //         document.write('<tr><td>' + firstName[i] + '</td><td>' + lastName[j] + '</td></tr>');
+  //     }
+  // }
+
+  // document.write('</table>');
+
+  // var firstName = ['BlueRay', 'Upchuck', 'Lojack', 'Gizmo', 'Do-Rag'];
+  // var lastName = ['Zzz', 'Burp', 'Dogbone', 'Droop'];
+  // var fullName = [];
+  // for (var i = 0; i < firstName.length; i++) {
+  //     for (var j = 0; j < lastName.length; j++) {
+  //         document.write(firstName[i] + " " + lastName[j])
+  //         document.write('<br>');
+  //     }
+
+  // }
+  // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+
+  // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+  // var fullNames = [];
+  // for (var i = 0; i < firstNames.length; i++) {
+  //     for (var j = 0; j < lastNames.length; j++) {
+  //         fullNames.push(firstNames[i] + lastNames[j]);
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+  // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+  // var fullNames = [];
+  // for(let j=0 ; j< firstNames.length ; j++){
+  //     for(let k=0 ; k < lastNames.length ; k++){
+  //         if(firstNames[j] === lastNames[k]){
+  //             fullNames.push(firstNames[j] , lastNames[k])
+  //         }
+  //     }
+  //     console.log(fullNames.join(' '));
+  // }
+
+  // alert('Menu');
+  // alert('1) Biryani \n 2) Tikka \n 3) Korma');
+
+  // let userfood = prompt('What do you want to order');
+  // let food = ['Biryani', 'Tikka', 'Korma'];
+  // let order = [];
+
+  // userfood = userfood.trim().toLowerCase();
+
+  // for (let i = 0; i < food.length; i++) {
+
+  //     let currentFood = food[i].toLowerCase();
+  //     if (userfood === currentFood) {
+  //         order.push(food[i]);
+
+  //         break;
+  //     }
+  // }
+  // console.log(order);
+
+  // for (let i = 0; i < 5; i++) {
+  //     for (let k = 0; k < i; k++) { // Changed i<4 to k<4
+  //         document.write(`*`);
+  //         // document.write(`k loop ====> ${k}`)
+  //     }
+  //     document.write('<br>');
+  // }
+
+  // for (let i = 2; i < 6; i++) {
+  //     console.log(i);
+  //     for (let k = 1; k <= 10; k++) {
+  //         document.write(`${i} X ${k} = ${i * k}` + '<br>')
+
+  //     }
+  //     document.write('<br>');
+  // }
+  // fullNames.push(prompt('enter your name').toLowerCase())
+  // console.log(fullNames);
+
+  // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+  // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+  // var fullNames = [];
+
+  // for (var i = 0; i < firstNames.length; i++) {
+  //     for (var j = 0; j < lastNames.length; j++) {
+  //         if (firstNames[i][0] === lastNames[j][0]) {
+  //             fullNames.push(firstNames[i] + lastNames[j])
+  //         }
+  //     }
+  // }
+
+  // console.log(fullNames);
+
+  // var firstNames = ["مانگہ ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+  // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+  // var fullNames = [];
+
+  // let fruitNames = [
+  //     "Apple",
+  //     "Banana",
+  //     "Orange",
+  //     "Grapes",
+  //     "Watermelon",
+  //     "Strawberry",
+  //     "Pineapple",
+  //     "Mango",
+  //     "Peach",
+  //     "Kiwi",
+  //     "Blueberry",
+  //     "Cherry",
+  //     "Pear",
+  //     "Plum",
+  //     "Raspberry",
+  //     "Apricot",
+  //     "Blackberry",
+  //     "Coconut",
+  //     "Lemon",
+  //     "Lime",
+  //     "Pomegranate",
+  //     "Avocado",
+  //     "Guava",
+  //     "Papaya",
+  //     "Cranberry",
+  // ];
+  // for (let index = 0; index < fruitNames.length; index++) {
+  //     // const element = fruitNames[index];
+  //     if(fruitNames[index][0] === 'A'){
+  //         document.write('The fruits names starts with letter A ' + fruitNames[index],'<br>');
+  //     }
+  //     else if(fruitNames[index][1,0] === 'B'){
+  //         document.write('The fruits names starts with letter B ' + fruitNames[index], '<br>');
+
+  //     }
+  //     else if(fruitNames[index][2,0] === 'C'){
+  //         document.write('The fruits names starts with letter C ' + fruitNames[index], '<br>');
+
+  //     }
+  // }
+
+  // var num = [10, 215, 300, 189, 22, 78, 42, 146, 143, 12];
+  // for (let i = 0; i < num.length - 1; i++) {
+  //     for (let j = 0; j < num.length - i - 1; j++) {
+  //         if (num[j] > num[j + 1]) {
+  //             let temp = num[j];
+  //             num[j] = num[j + 1];
+  //             num[j + 1] = temp;
+  //         }
+  //     }
+  // }
+
+  // console.log(num);
+
+  // var num = [10, 215, 300, 189, 22, 78, 42, 146, 143, 12];
+  // var decending = [];
+
+  // for (let i = 0; i < num.length - 1; i++) {
+  //     for (let j = 0; j < num.length - i - 1; j++) {
+  //         if (num[j] < num[j + 1]) {
+  //             let temp = num[j];
+  //             num[j] = num[j + 1];
+  //             num[j + 1] = temp;
+  //         }
+  //     }
+  // }
+  // decending = num.slice()
+  // console.log(decending);
+
+  // var id = ['ammar', 'burhan', 'ibrahim'];
+  // var userCheck = prompt('Enter name to check')
+  // for (let i = 0; i < id.length; i++) {
+  //     if (userCheck === id[i]) {
+  //         console.log('match found');
+  //     }
+  //     else{
+  //         console.log('Not found');
+  //     }
+  // }
+
+  // const fruits = ['apple', 'banana', 'orange', 'grapes', 'mango'];
+  // var user = prompt('Enter fruit to check ');
+  // var found = false ;
+
+  // for(let i=0 ; i < fruits.length ; i++){
+  //     if(user === fruits[i]){
+  //         found = true;
+  //     }
+  // }
+  // if(found === true){
+  //     alert(`${user} found`);
+  //
+  // }
+  // else{
+  //     alert(`${user} not found` )
+  // }
+
+  // var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+  // var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+  // var fullNames = [];
+  // for (let i = 0; i < firstNames.length; i++) {
+  //     for (let j = 0; j < lastNames.length; j++) {
+  //         if (firstNames[i][0] == lastNames[j][0]) {
+  //             fullNames.push(firstNames[i] + lastNames[j])
+  //         }
+
+  //     }
+  // }
+  // console.log(fullNames);
+
+  // for (let i = 0; i < 5; i++) {
+  //     for (let j = 0; j < 10; j++) {
+  //         document.write(`${i} X ${j} = ${i*j}`, '<br>')
+  //     }
+  //     document.write('<br>')
+  // }
+
+  // var student = [ 'ammar' , 'burhan', 'ali'];
+  // for(let i = 0 ; i < student.length ; i++){
+  //     var userInput = prompt('Replace '+ student[i])
+  //     if(userInput !== null && userInput !== ''){
+  //         student[i] = userInput;
+  //     }
+  //     else{
+  //         console.log('No replacement '+ student[i]);
+  //     }
+
+  // }
+  // console.log(student);
+
+  // var student = ['ammar', 'burhan', 'ali'];
+  // for (let i = 0; i < student.length; i++) {
+  //     var userInput = prompt('Replace ' + student[i]);
+  //     if (userInput !== null && userInput !== '') {
+  //         student[i] = userInput;
+  //     }
+  //     else {
+  //         console.log('No replacement ' + student[i]);
+  //     }
+  // }
+  // var userName = student.push(prompt('Enter name'));
+  // var userName = student.push(prompt('Enter name'));
+  // var userName = student.push(prompt('Enter name'));
+  // var userName = student.push(prompt('Enter name'));
+  // console.log(student);
+
+  // var arr = [4, 5, 12, 14, 13, 23, 29, 28, 35, 33, 34, 37, 39, 44];
+  // var even = [];
+  // var odd = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //     if (arr[i] % 2 == 0) {
+  //         even.push(arr[i])
+  //     }
+  //     else {
+  //         odd.push(arr[i])
+  //     }
+  // }
+
+  // console.log(even);
+  // console.log(odd);
+
+  // var student = ['tanveer', 'aliyan', 'bilal'];
+  // var check = 'Aliyan';
+  // var flag = false ;
+  // for (let i = 0; i < student.length; i++) {
+  //     if (check.toLowerCase() == student[i]) {
+  //         flag = true;
+  //         break;
+  //     }
+  // }
+  // if(flag == true){
+  //     console.log('Name found');
+  // }
+  // else{
+  //     console.log('Not Found');
+  // }
+
+  // var num = "5 6 7 8 9 ";
+  // for (i = num.length - 1; i >= 0; i--) {
+  //     console.log(num[i]);
+  // }
+
+  // var naam = 'bilal';
+  // for (let i = naam.length - 1; i >= 0; i--) {
+  //     console.log(naam[i]);
+  // }
+
+  // var number = '1 4 6 7';
+  // for (let i = number.length - 1; i >= 0; i--) {
+  //     console.log(number[i]);
+  // }
+
+  // var text = 'ammar';
+  // var re = text.split('').join('');
+  // console.log(re);
+
+  // let firstInput = +prompt('Enter first number');
+  // let secondInput = + prompt('Enter second number');
+  // if(firstInput > secondInput) {
+  //     document.write(`${firstInput} is greater than ${secondInput}`)
+  // }
+  // else if(firstInput < secondInput) {
+  //     document.write(`${firstInput} is less than ${secondInput}`)
+  // }
+  // else if(firstInput === secondInput) {
+  //     document.write(`${firstInput} is equal to ${secondInput}`)
+  // }
+
+  // let number_1 = +prompt('Enter first number');
+  // let number_2 = +prompt('Enter second number');
+  // let number_3 = +prompt('Enter third number');
+
+  // let total = number_1 * number_2 * number_3;
+  // if(total > 0){
+  //     document.write(`${total} is a positive number`);
+  // }
+  // else{
+  //     document.write(`${total} is a negative number`);
+
+  // }
+
+  // let number_1 = +prompt('Enter first number');
+  // let number_2 = +prompt('Enter second number');
+  // let number_3 = +prompt('Enter third number');
+
+  // let smallest;
+  // let middle;
+  // let highest;
+  // if (number_1 <= number_2 && number_1 <= number_3) {
+  //     smallest = number_1
+  //     if (number_2 <= number_3) {
+  //         middle = number_2;
+  //         highest = number_3;
+  //     }
+  //     else {
+  //         middle = number_3;
+  //         highest = number_2;
+  //     }
+  // } else if (number_2 <= number_1 && number_2 <= number_3) {
+  //     smallest = number_2;
+  //     if (number_1 <= number_3) {
+  //         middle = number_1
+  //         highest = number_3
+  //     } else {
+  //         middle = number_3
+  //         highest = number_1
+  //     }
+  // } else if (number_3 <= number_1 && number_3 <= number_2) {
+  //     smallest = number_3;
+  //     if (number_2 <= number_1) {
+  //         middle = number_1;
+  //         highest = number_2;
+  //     } else {
+  //         middle = number_2;
+  //         highest = number_1;
+  //     }
+  // }
+  // document.write(smallest + ' ' + middle + ' ' + highest);
+
+  // var student = ['ammar', 'bilal', 'umer', 'mimi', 'azaan'];
+  // var del = student.join(' , ');
+  // // var del = student.splice(4, 1);
+  // // console.log(del + ' is deleted');
+  // console.log(student);
+  // console.log(del);
+
+  // var age = [8, 13, 16, 18, 21, 22, 32, 37];
+  // var kids = [];
+  // var younger = [];
+  // var adults = [];
+  // for (let i = 0; i < age.length; i++) {
+  //     if (age[i] >= 8 && age[i] <= 16) {
+  //         kids.push(age[i])
+  //     }
+  //     else if (age[i] >= 18 && age[i] <= 22) {
+  //         younger.push(age[i])
+  //     }
+  //     else if (age[i] >= 23 && age[i] <= 37) {
+  //         adults.push(age[i])
+  //     }
+  // }
+  // console.log(kids);
+
+  // let x = 10;
+  // let x = 20; // Error: Identifier 'x' has already been declared
+
+  // console.log(x);
+
+  // var num = 23
+  // var num2 = '23'
+  // alert(num + num2);
+
+  // var num1 = 1
+  // var num2 = num1--;
+  // console.log(num1);
+  // if (num1 === num2) {
+  //     console.log("matched")
+  // }
+  // else {
+  //     console.log("not-matched")
+  // }
+
+  // var num = 9;
+  // num++;
+  // console.log(num++);
+
+  // var num = 1;
+  // var num2 = num++;
+  // console.log(num);
+  // console.log(num2);
+  // if(num !== num2){
+  //     console.log(true);
+  // }else{
+  //     console.log(false);
+  // }
+
+  // const namesArray1 = [
+  //     "Liam",
+  //     "Olivia",
+  //     "Noah",
+  //     "Emma",
+  //     "Oliver",
+  //     "Ava",
+  //     "Elijah",
+  //     "Charlotte",
+  //     "William",
+  //     "Sophia"
+  // ];
+
+  // const namesArray2 = [
+  //     "James",
+  //     "Amelia",
+  //     "Logan",
+  //     "Isabella",
+  //     "Lucas",
+  //     "Mia",
+  //     "Mason",
+  //     "Harper",
+  //     "Ethan",
+  //     "Evelyn"
+  // ];
+  // const newName = [];
+  // for (let i = 0; i < namesArray1.length; i++) {
+
+  //     for (let j = 0; j < namesArray2.length; j++) {
+  //         if (namesArray1[i][0] == namesArray2[j][0]) {
+  //             newName.push(namesArray1 + namesArray2)
+  //         }
+  //     }
+  // }
+
+  // console.log(newName);
+
+  // var username = '';
+  // var firstChar = username.slice(0, 1).toUpperCase();
+  // var othersChar = username.slice(1, username.length).toLowerCase();
+  // console.log(firstChar + othersChar);
+
+  // var month = prompt('Enter month name');
+  // var charInMonth = month.length;
+  // if(charInMonth > 3){
+  //     var shortForm = month.slice(0,3);
+  //     console.log(shortForm.toUpperCase());
+  // }
+
+  // var month = prompt('enter month');
+  // var char = month.length;
+  // if(char > 3){
+  //     console.log(month.slice(0,3).toUpperCase());
+  // }
+
+  // var course = 'Web and App Madaris Online';
+  // for (let i = 0; i < course.length; i++) {
+  //     if (course.slice(i, i + 7) === 'Madaris') {
+  //         console.log('found');
+  //     }
+  // }
+
+  // var text = 'my name is ammar';
+  // for (let i = 0; i < text.length; i++) {
+  //     if (text.slice(i, i + 5) === 'ammar') {
+  //         text = text.slice(0, i) + 'ahmed'
+  //     }
+  // }
+  // console.log(text);
+
+  //   var text = 'my name is ammar';
+  //   var userfound = 'name'
+  //   for(let i = 0 ; i < text.length ; i++){
+  //     if(text.slice(i,i+userfound.length)== userfound){
+  //         console.log('match');
+  //     }
+  //     var strChar = text.slice(0,i);
+  //     var lastChar = text.slice(i+userfound.length)
+  //     console.log(strChar + 'as' +lastChar);
+  //     break
+  //   }
+
+  // var text = 'my name is ammar';
+  // var index = text.indexOf('a');
+  // console.log(index);
+
+  //         var text = `The New Yorker magazine doesn't allow the phrase "World War II. " They say it should
+  // be "the Second World War."`
+  //         var firstChar = text.indexOf('World War II');
+  //         console.log(firstChar);
+  //         if (firstChar !== -1) {
+  //             text = text.slice(0, firstChar) + 'Second world war' + text.slice(firstChar + 12);
+  //         }
+  //         console.log(text);
+
+  //Functions
+
+  // function add(a,b){
+  //     console.log(a,b);
+  // }
+  // add(5+6 , 7+8);
+  // console.log(add);
+  // parameters
+  // function too(name, batch, rollno, instructor) {
+  //     console.log('My name is ' + name + '. Batch number is ' + batch + '. My roll no is ' + rollno + '. My teacher name is ' + instructor);
+  // }
+  // arguments
+  // too('ammar', 11, 227780, 'Rizwan Bhatti');
+  // console.log(too);
+
+  // function month(monthName , num){
+  //     console.log(monthName + ' in number is ' +num );
+  // }
+  // month('March' , 3)
+
+  // var firstNames = ["Burhan ", "Aimen ", "Lojack ", "Gizmo ", "Dawood "];
+  // var lastNames = ["Ammar", "Batool", "Dogbone", "Darind"];
+  // var fullName = [];
+  // for (let i = 0; i < firstNames.length; i++) {
+  //     for (let j = 0; j < lastNames.length; j++) {
+  //         if(firstNames[i][0]=== lastNames[j][0]){
+  //             fullName.push(firstNames[i]+ lastNames[j])
+  //         }
+  //     }
+  // }
+  // console.log(fullName.join(' '));
+
+  // function popup(a){
+  //     console.log(a);
+  // }
+  // popup('Hi I am pop up box');
+
+  // var text = 'my name is ammar';
+  // var userCheck = 'name';
+  // for (let i = 0; i < text.length; i++) {
+  //     if (text.slice(i, i + userCheck.length) == userCheck) {
+  //         console.log('This character is in the string ('+ userCheck+')');
+  //     }
+
+  // }
+
+  // var text = "To be or not to be.";
+  // var segIndex = text.lastIndexOf(".");
+  // console.log(segIndex);
+
+  // var text = "To be or not to be.";
+  // var segIndex = text.indexOf('be');
+  // console.log(segIndex);
+
+  // var arr = ['ali', 'usman', 'irfan', 'pasha'];
+  // var userFind = prompt('Enter name..');
+  // var flag = false;
+  // for (let i = 0; i < arr.length; i++) {
+  //     if (userFind.toLowerCase() == arr[i]) {
+  //         flag = true;
+  //         break;
+  //     }
+  // }
+  // if (flag == true) {
+  //     console.log('Found');
+  // }
+
+  // var user = prompt('Enter name');
+  // let firstChar = user[0].toUpperCase() + user.slice(1);
+  // console.log(firstChar);
+
+  // var month = 'December';
+  // var charInmonth = month.length;
+  // if (charInmonth > 3) {
+  //     monthAbb = month.slice(0, 3)
+  // }
+  // console.log(monthAbb);
+
+  // const months = [
+  //     "January",
+  //     "February",
+  //     "March",
+  //     "April",
+  //     "May",
+  //     "June",
+  //     "July",
+  //     "August",
+  //     "September",
+  //     "October",
+  //     "November",
+  //     "December"
+  // ];
+  // var monthAbb = [];
+
+  // for (let i = 0; i < months.length; i++) {
+  //     var charInmonth = months.length;
+  //     if (charInmonth > 3) {
+  //         var abbreviation = months[i].slice(0, 3);
+  //         monthAbb.push(abbreviation);
+  //     }
+  // }
+  // console.log(monthAbb);
+
+  // var text = 'my name is xyz';
+  // console.log(text);
+  // let add =text.indexOf('xyz');
+  // console.log(add);
+
+  // var months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+  // var arr = [];
+  // for (let i = 0; i < months.length; i++) {
+  //     if (months.length > 3) {
+  //         arr.push(months[i].slice(0, 3))
+  //     }
+  // }
+  // console.log(arr);
+
+  // var text = 'Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.'
+
+  // var text = 'Video provides a powerful way to help you prove your to point.'
+  // var userReplace = prompt('enter your replace word')
+  // var userAdd = prompt('enter your new word')
+  // for (var i = 0; i < text.length; i++) {
+  //     if (text.slice(i, i + userReplace.length) == userReplace) {
+
+  //         console.log(text.slice(0, i) + userAdd + text.slice(i + userReplace.length))
+  //         text = text.slice(0, i) + userAdd + text.slice(i + userReplace.length)
+  //     }
+  // }
+  // console.log(text);
+
+  // let text = "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document."
+  // var findWord = "for";
+  // for (let i = 0; i < text.length; i++) {
+  //     if (text.slice(i, i + 3) == findWord) {
+  //         console.log(findWord);
+  //     }
+  // }
+
+  // var given = "Hello, this is a practing string for Javascript";
+  //  for (let i = 0; i < given.length; i++) {
+  //      if (given.slice(i, i + 8) == "practing" ) {
+  //        given= given.slice(0,i)+given.slice(i+8)
+  //         //  console.log( "found");
+  //         console.log(given);
+  //      }
+  //  }
+  // console.log(given.slice(17, 25));
+
+  // let repl = "Javascript"
+  // console.log(repl.replace("Javascript", "Node.js"));
+
+  // console.log(given.indexOf("is"));
+
+  // console.log(given.slice(7, 18));
+
+  // var given = "Hello, this is a practing string for Javascript";
+  // let userCheck = prompt("Enter Word");
+  // for (let i = 0; i < given.length; i++) {
+  //     if (given.slice(i, i + userCheck.length).toLowerCase() == userCheck) {
+  //        console.log('Found');
+  //     }
+  // }
+
+  //                      0       1       2     3        4          5
+  // var name1 = ["wajid ","usman","ali","usman", "burhan", "usman"];
+  // console.log();
+
+  // var str = "My name is xyz Ahmed .";
+  // var replaceWord = "xyz";
+  // var add = "Ammar";
+  // console.log(str.replace(/xyz/g, add));
+  // var characterPlace = str.indexOf(replaceWord);
+  // console.log(characterPlace);
+  // console.log(str.slice(0, characterPlace));
+  // if (characterPlace != -1) {
+  //     console.log(str.slice(0, characterPlace) + add + str.slice(characterPlace + replaceWord.length));
+
+  // }
+
+  // let score = "My score is 50 / 100 .";
+  // console.log(score.replace(/50/g , '80'));
+
+  //     let dummyText = "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document";
+  //     let findWord = "to";
+  //    if(dummyText.indexOf(findWord) !== -1){
+  //     console.log("Word Found");
+  //    }else{
+  //     console.log("Word not found");
+  //    }
+  //    console.log(dummyText.indexOf(findWord));
+
+  //         let str = "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document";
+  //         let findWord = "you";
+  //         for (let i = 0; i < str.length; i++) {
+  //             if (str.slice(i, i + 3).toLowerCase()== findWord) {
+  //                 str = str.slice(0 , i)+ "ammar"+ str.slice(i+3 )
+  //             }
+  //         }
+  // console.log(str);
+
+  // let str = "my name is ammar";
+  // let convert = str.split(" ");
+  // let newArray = []
+  // for(let i =0 ; i < convert.length ; i++){
+  //     newArray.push(convert[i][0].toUpperCase()+ convert[i].slice(1));
+  // }
+  // console.log(newArray.join(""));
+
+  // var name = "xyz"
+  // var lastChar = name.charAt(name.length-1);
+  // console.log(lastChar);
+
+  // var firstName = "ammar"
+
+  // var firstChar = firstName.charAt(4)
+  // console.log(firstChar);
+
+  // let Random = Math.random();
+  // let convert = Math.round(Random);
+  // console.log(convert);
+  // if (Random <= 0) {
+  //     console.log("Head");
+  // } else {
+  //     console.log("Tail");
+  // }
+
+  // let random  = Math.random() *10;
+  // console.log(Math.round(random));
+
+  // let my = +prompt("Macth");
+  // if(my == random){
+  //     console.log("Win " + my);
+  // }else if(my <= random) {
+  //     console.log("Your number is less than computer " + my);
+  // }else{
+  //     console.log("Lose "+ my);
+  // }
+
+  // let computer = Math.random()*10+1;
+  // let user = 5;
+  // computer = Math.round(computer)
+  // console.log(computer);
+  //     console.log(`user number ${user}`);
+  //         if(user == computer){
+  //             console.log('win');
+  //         }else if(user < computer || user != computer){
+  //             console.log('lose');
+  //         }
+
+  // let color1 = Math.round(Math.random() * 255+1
+  // )
+  // console.log(color1);
+  // let color2 =Math.floor(Math.round(Math.random()*255 +1));
+  // console.log(color2);
+  // let color3 = Math.round(Math.random()*255 +1);
+  // console.log(color3);
+  // console.log(`rgb(${color1} , ${color2} , ${color3})`);
+
+  // var num = 1;
+  // var str = num.toString();
+  // if (str.charAt(str.length - 1) === "1") {
+  //     str = str.slice(0, str.length - 1) + "Heloo";
+  // }
+  // num = Number(str);
+  // prettyNum = num.toFixed(2);
+  // console.log(str, num);
+
+  // function ForceCalc() {
+
+  //     let mass = 23.34;
+  //     let acc = 80;
+  //     let Force = mass * acc
+  //     console.log(Force);
+  // }
+  // Math.round(ForceCalc());
+
+  // Imp
+  // let num = Math.floor(Math.random()*900);
+  // console.log(num+100);
+
+  // let date = new Date();
+
+  // const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  // const months = ['Jan','Feb' ,'March' ,'Apr']
+
+  // // console.log(date.getDay());
+  // console.log(daysOfWeek[date.getDay()] + " "+ date.getDate() + " " + months[date.getMonth()] + " "+ date.getFullYear() + " "+ (date.getHours()-12) + ":"+date.getMinutes());
+  // console.log(date.toDateString());
+  // console.log(date. getMonth()+1 +'/'+ date.getDate() +'/'+ date.getFullYear());
+  // console.log(Fdate.getMonth()+1+'/'+ date.getDate() +'/'+ date.getFullYear());
+  // console.log(date. getDate());
+  // console.log(date.getFullYear());
+
+  // var now = new Date();
+  // console.log(now);
+  // console.log(typeof now);
+
+
+
+  // Practice this code
+
+
+
+  // var ampm
+  // if(hours >12){
+  //     hours = hours-12
+  //     ampm = 'Pm'
+  //     if(hours<10){
+  //       hours= "0" +hours
+  //     }
+  // }else{
+  //     hours
+  //     ampm = 'Am'
+  // }
+
+  // console.log(${dayNames[day]} ${date} ${ monthName[month]} ${year} ${hours}:${mints} ${ampm});
+
+  // declaring a function named greet()
+  // function greet() {
+  //     var number = prompt('enter number')
+  // if(number % 2 ==0 ){
+  //     console.log('Even Number' + number);
+  // }else{
+  //     console.log('Odd Number' + number);
+  // }
+  // }
+
+  // function addTwoNumber(){
+  //     console.log(5+2);
+  // }
+  // addTwoNumber()
+
+  // function addTwoNumber(a,b){
+  //         console.log(a+b);
+  //     }
+  //     addTwoNumber(+prompt('enter value 1') , +prompt('enter value 2'))
+
+  // var userName = prompt('enter your name')
+  // function user(name1){
+  //     console.log(name1);
+  // }
+  // user(prompt('enter your name'))
+
+  // var now = new Date('8-8-2024 10:25')
+  // console.log(now);
+
+  // monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  // var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+  // var day = now.getDay()
+  // // console.log(day, '=====> day');
+  // var month = now.getMonth()
+  // // console.log(month , '=====> month');
+  // var date = now.getDate()
+  // // console.log(date , '=====> date');
+  // var year = now.getFullYear()
+  // // console.log(year , '=====> year');
+  // var hours = now.getHours()
+  // // console.log(hours , '=====> hours');
+  // var mints = now.getMinutes()
+  // console.log(mints , '=====> mints');
+
+  // var now = new Date();
+  // console.log(now);
+  // var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  // var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // var ampm = "";
+  // var month = now.getMonth();
+  // console.log(month + "===>Month");
+  // var date = now.getDate();
+  // console.log(date + "===>date");
+  // var year = now.getFullYear();
+  // console.log(year + "===>Year");
+  // var hours = now.getHours();
+  // console.log(hours + "===>hours");
+  // var mints = now.getMinutes();
+  // console.log(mints + "===>mintues");
+  // if (hours <= 12 && hours == 12) {
+  //   hours = hours - 12
+  //   ampm += "P.M"
+  //   hours = 12;
+  //   if (hours < 10) {
+  //     hours = "0" + hours
+  //   }
+  // } else {
+  //   ampm += 'AM'
+  // }
+  // console.log(monthName[month] + " " + date + " " + year + " " + hours + ":" + mints + " " + ampm);
+  // console.log('May 2 2024');
+
+  // function foo(){
+  // var firstCharacter = prompt("Enter name");
+  // var char = firstCharacter.slice(0,1);
+  // console.log(char);
+  // };
+  // foo();
+
+  // function reverseWord() {
+  //   var user = "mom";
+  //   var character = user.split('').reverse().join("");
+
+  //   if (user == character) {
+  //     console.log(true);
+  //   } else {
+  //     console.log(false);
+  //   }
+
+  // }
+  // reverseWord();
+
+  //Find longest word in the sentence
+  // var text = "flutter development";
+  // var arr = text.split(' '); // first convert string into array
+  // console.log(arr);
+  // var longestWord = "";
+  // var maximum = 0;//ntialize the maximum value which starts from 0
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i].length > 0) {
+  //     maximum += arr[i].length;
+  //     longestWord = arr[i]
+  //   }
+  // }
+  // console.log(longestWord);
+
+
+  // var palidromeWord = "dad";
+  // var arr = palidromeWord.split("").reverse().join('');
+  // if (arr == palidromeWord) {
+  //   console.log(palidromeWord +" "+true);
+  // } else {
+  //   console.log(false);
+  // }
+
+  //   {
+  //     var a = 'xyz'
+  //   }
+  // console.log(a);
+
+
+  // {
+  //   let a = 60;
+  //   console.log(a);
+  // }
+
+  //  let a = 10;
+  // console.log(a);
+  // let a = 20
+
+  // let i;
+  // for (i = 0; i < 10; i++) {
+  //   console.log(i);///0 9
+  // }
+  // console.log(i, 'outside loop value');
+
+  // function abc() {
+  //   let userInput = prompt('Enter Name');
+  //   let word = userInput.split(" ");
+  //   let capsSentence = " ";
+  //   for (let i = 0; i < word.length; i++) {
+  //     capsWord = word[i][0].toUpperCase() + word[i].slice(1);
+  //     capsSentence += capsWord + "  ";
+  //   }
+  //   console.log(capsSentence);
+  //   let minimum = 0;
+  //   let longestText = "";
+  //   for (let i = 0; i < word.length; i++) {
+  //     if (word[i].length > minimum) {
+  //       minimum += word[i].length;
+  //       longestText = word[i]
+  //     }
+  //   }
+  //   console.log(`The longest word is '${longestText}' here.`);
+  // }
+  // // abc();
+
+
+  // function telltime() {
+  //   let now = new Date();
+  //   let hours = now.getHours();
+  //   let min = now.getMinutes();
+  //   let format = hours - 12;
+  //   let ampm = ""
+  //   if (format <= 12) {
+  //     ampm += "P.M"
+  //   } else {
+  //     ampm += 'A.M'
+  //   }
+  //   console.log('Current time ' + hours + ":" + min + " " + ampm);
+  // }
+
+  // // telltime()
+
+  // function foo() {
+  //   var user1 = +prompt('value1')
+  //   var user2 = +prompt('value2')
+  //   var user3 = +prompt('value3')
+  //   console.log(user1 + user2 + user3);
+  // }
+  // // foo();
+
+  // function too(a, b, c) {
+  //   console.log(a + b + c);
+  // }
+  // too( +prompt("Value A"),  +prompt('Value B'), +prompt('Value C'))
+
+  // var a = +prompt('enter value1')
+  // var b = +prompt('enter value2')
+  // var c = +prompt('enter value3')
+  // var ans
+  // function foo(a, b, c) {
+  //   return ans = a + b + c;
+  // }
+  // foo(a,b,c)
+  // console.log(ans);
+
+  // function check(a) {
+  //   if (a % 2 == 0) {
+  //     return "Is a even number"
+  //   } else {
+  //     return "Is a odd number"
+  //   }
+  // }
+  // let result = check(+prompt("Enter value"));
+  // console.log(res);
+
+  // function checkNumber(even) {
+  //   return even % 2 == 0
+  // }
+  // Jab bhi value ko return krna ha toh function name ko ek variable mei store krdou.then arguments pass krdou!.
+  // let final = checkNumber(29);
+  // console.log(final);
+
+
+  // function display() {
+  //   console.log("This will be executed.");
+  //   console.log("This will not be executed.");
+  //   return "Returning from function.";
+  // }
+  // display();
+  // Jab bhi value ko return krna ha toh function name ko ek variable mei store krdou.then arguments pass krdou!.
+  // let mess = display();
+  // console.log(mess);
+
+  // function timeLeft() {
+  //   var now = new Date();
+  //   var bDay = new Date('28 dec 2024');
+  //   var dayLeft = bDay - now;
+  //   console.log(Math.floor(dayLeft / 1000 / 3600 / 24) + "left in BithDay");
+  //   console.log(typeof dayLeft);
+  // }
+  // timeLeft();
+
+  // function Monday (){
+  //   for(let i =4 ; i<=24; i++){
+  //     var date = new Date('28 Dec '+ i)
+  //     var convert = date.toString();
+  //     // console.log(convert);
+  //     if(convert.slice(0,0+3)== 'Mon'){
+  //       console.log(convert +  i);
+  //     }
+  //   }
+  // }
+  // Monday();
+  // function timeLeft() {
+  //   let now = new Date();
+  //   let task = new Date('28 December 2024');
+  //   let result = task - now;
+  //   console.log("Days left in my Birthday " + Math.floor(result / 1000 / 3600 / 24));
+  // }
+  // timeLeft();
+
+  // function task2() {
+  //   for (let i = 24; i <= 50; i++) {
+  //     let date = new Date('1 Jan ' + i);
+  //     // console.log(date);
+  //     let convert = date.toString();
+  //     if (convert.slice(0, 0 + 3) == 'Sun') {
+  //       console.log(convert + i);
+  //     }
+
+  //   }
+  // }
+
+  // task2()
+
+  // function time() {
+  //   var now = new Date();
+  //   var shaadi = new Date('27 oct 2024');
+  //   var left = shaadi - now;
+  //   console.log(Math.floor(left / 1000 / 3600 / 24) + ' days left in abid barat');
+
+  // }
+  // 
+  // time()
+  // var day = 'mon';
+  // switch (day) {
+  //   case 'mon':
+  //     console.log('Monday');
+  //     break;
+  //   case 'tue':
+  //     console.log('tuesday');
+  //     break;
+  //   case 'wed':
+  //     console.log('Wednesday');
+  //     break;
+  //   case 'thu':
+  //     break;
+  //     console.log('Tursday');
+  //     break;
+  //   case 'fri':
+  //     break;
+  //     console.log('Friday');
+  //   default: ('Invaild Date');
+  // }
+
+  //   var arr1 = ['item1', 'item2']
+  //   var arr2 = ['item3', 'item4']
+  //   var ans = [...arr1, ...arr2]
+  //   console.log(ans);
+
+  //    var arr = '12345678952'
+  //  var newArr = [...arr]
+  //  var newArr = arr.split('')
+  //   console.log(newArr);
+  // console.log( Math.ceil(0.99))// round up
+  // console.log( Math.round(1.4))// 
+  // console.log( Math.floor(0.99))//round downfunction multiply(a, b) {
+  //   return a * Number(b);
+  // }
+
+  // console.log(multiply(“2”, “3”));
+  // function addNames(...name) {
+  //   for (let i = 0; i < name.length; i++) {
+  //     var othersChar = name[i].slice(1)
+  //     var firstChar = name[i][0].toUpperCase();
+  //     var capitalChar = (firstChar + othersChar.toLowerCase());
+  //     console.log(capitalChar);
+  //   }
+  // }
+  // addNames(prompt('Enter your name'))
+  
+</script>
+</body>
+
+</html>
+
+</script>
 </body>
 
 </html>
